@@ -10,3 +10,5 @@ Once you try to open a form it will give a missing resource error.
  Finally go to your workspace and from solution explorer right click your solution again and click "Rebuild".
  
  That should do the trick and you can start on your work.
+
+//DO NOT MAKE ANY CHANGES TO THIS README FILE ASK FOR PERMISSION AND ADVICE BEFORE YOU MERGE ANYTHING THROUGH GIT BASH//
