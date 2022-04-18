@@ -32,23 +32,23 @@
             this.metroPanel5 = new MetroFramework.Controls.MetroPanel();
             this.pnlNav = new System.Windows.Forms.Panel();
             this.leftpnl = new MetroFramework.Controls.MetroPanel();
-            this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
-            this.metroPanel6 = new MetroFramework.Controls.MetroPanel();
+            this.userdetailpnl = new MetroFramework.Controls.MetroPanel();
+            this.usertypepnl = new MetroFramework.Controls.MetroPanel();
             this.typelbl = new MetroFramework.Controls.MetroLabel();
             this.logoutbtn = new System.Windows.Forms.Button();
             this.databasebtn = new System.Windows.Forms.Button();
             this.formsbtn = new System.Windows.Forms.Button();
             this.settingsbtn = new System.Windows.Forms.Button();
             this.homebtn = new System.Windows.Forms.Button();
-            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
+            this.usericonpnl = new MetroFramework.Controls.MetroPanel();
+            this.usernamepnl = new MetroFramework.Controls.MetroPanel();
             this.usernamelbl = new MetroFramework.Controls.MetroLabel();
             this.metroPanel5.SuspendLayout();
             this.leftpnl.SuspendLayout();
-            this.metroPanel3.SuspendLayout();
-            this.metroPanel6.SuspendLayout();
-            this.metroPanel2.SuspendLayout();
-            this.metroPanel4.SuspendLayout();
+            this.userdetailpnl.SuspendLayout();
+            this.usertypepnl.SuspendLayout();
+            this.usericonpnl.SuspendLayout();
+            this.usernamepnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroPanel5
@@ -86,7 +86,7 @@
             this.leftpnl.Controls.Add(this.formsbtn);
             this.leftpnl.Controls.Add(this.settingsbtn);
             this.leftpnl.Controls.Add(this.homebtn);
-            this.leftpnl.Controls.Add(this.metroPanel3);
+            this.leftpnl.Controls.Add(this.userdetailpnl);
             this.leftpnl.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftpnl.HorizontalScrollbarBarColor = true;
             this.leftpnl.HorizontalScrollbarHighlightOnWheel = false;
@@ -101,42 +101,42 @@
             this.leftpnl.VerticalScrollbarHighlightOnWheel = false;
             this.leftpnl.VerticalScrollbarSize = 10;
             // 
-            // metroPanel3
+            // userdetailpnl
             // 
-            this.metroPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.metroPanel3.Controls.Add(this.metroPanel6);
-            this.metroPanel3.Controls.Add(this.metroPanel2);
-            this.metroPanel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroPanel3.HorizontalScrollbarBarColor = true;
-            this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel3.HorizontalScrollbarSize = 10;
-            this.metroPanel3.Location = new System.Drawing.Point(0, 0);
-            this.metroPanel3.Name = "metroPanel3";
-            this.metroPanel3.Size = new System.Drawing.Size(350, 355);
-            this.metroPanel3.TabIndex = 3;
-            this.metroPanel3.UseCustomBackColor = true;
-            this.metroPanel3.UseCustomForeColor = true;
-            this.metroPanel3.VerticalScrollbarBarColor = true;
-            this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel3.VerticalScrollbarSize = 10;
+            this.userdetailpnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.userdetailpnl.Controls.Add(this.usertypepnl);
+            this.userdetailpnl.Controls.Add(this.usericonpnl);
+            this.userdetailpnl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.userdetailpnl.HorizontalScrollbarBarColor = true;
+            this.userdetailpnl.HorizontalScrollbarHighlightOnWheel = false;
+            this.userdetailpnl.HorizontalScrollbarSize = 10;
+            this.userdetailpnl.Location = new System.Drawing.Point(0, 0);
+            this.userdetailpnl.Name = "userdetailpnl";
+            this.userdetailpnl.Size = new System.Drawing.Size(350, 355);
+            this.userdetailpnl.TabIndex = 3;
+            this.userdetailpnl.UseCustomBackColor = true;
+            this.userdetailpnl.UseCustomForeColor = true;
+            this.userdetailpnl.VerticalScrollbarBarColor = true;
+            this.userdetailpnl.VerticalScrollbarHighlightOnWheel = false;
+            this.userdetailpnl.VerticalScrollbarSize = 10;
             // 
-            // metroPanel6
+            // usertypepnl
             // 
-            this.metroPanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.metroPanel6.Controls.Add(this.typelbl);
-            this.metroPanel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroPanel6.HorizontalScrollbarBarColor = true;
-            this.metroPanel6.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel6.HorizontalScrollbarSize = 10;
-            this.metroPanel6.Location = new System.Drawing.Point(0, 303);
-            this.metroPanel6.Name = "metroPanel6";
-            this.metroPanel6.Size = new System.Drawing.Size(350, 39);
-            this.metroPanel6.TabIndex = 5;
-            this.metroPanel6.UseCustomBackColor = true;
-            this.metroPanel6.UseCustomForeColor = true;
-            this.metroPanel6.VerticalScrollbarBarColor = true;
-            this.metroPanel6.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel6.VerticalScrollbarSize = 10;
+            this.usertypepnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.usertypepnl.Controls.Add(this.typelbl);
+            this.usertypepnl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.usertypepnl.HorizontalScrollbarBarColor = true;
+            this.usertypepnl.HorizontalScrollbarHighlightOnWheel = false;
+            this.usertypepnl.HorizontalScrollbarSize = 10;
+            this.usertypepnl.Location = new System.Drawing.Point(0, 303);
+            this.usertypepnl.Name = "usertypepnl";
+            this.usertypepnl.Size = new System.Drawing.Size(350, 39);
+            this.usertypepnl.TabIndex = 5;
+            this.usertypepnl.UseCustomBackColor = true;
+            this.usertypepnl.UseCustomForeColor = true;
+            this.usertypepnl.VerticalScrollbarBarColor = true;
+            this.usertypepnl.VerticalScrollbarHighlightOnWheel = false;
+            this.usertypepnl.VerticalScrollbarSize = 10;
             // 
             // typelbl
             // 
@@ -166,7 +166,7 @@
             this.logoutbtn.Image = global::Data_Storing_App.Properties.Resources.logout;
             this.logoutbtn.Location = new System.Drawing.Point(0, 583);
             this.logoutbtn.Name = "logoutbtn";
-            this.logoutbtn.Padding = new System.Windows.Forms.Padding(7, 0, 13, 0);
+            this.logoutbtn.Padding = new System.Windows.Forms.Padding(7, 0, 23, 0);
             this.logoutbtn.Size = new System.Drawing.Size(350, 76);
             this.logoutbtn.TabIndex = 14;
             this.logoutbtn.Text = "Logout";
@@ -188,7 +188,7 @@
             this.databasebtn.Image = global::Data_Storing_App.Properties.Resources.database;
             this.databasebtn.Location = new System.Drawing.Point(0, 507);
             this.databasebtn.Name = "databasebtn";
-            this.databasebtn.Padding = new System.Windows.Forms.Padding(14, 0, 11, 0);
+            this.databasebtn.Padding = new System.Windows.Forms.Padding(14, 0, 18, 0);
             this.databasebtn.Size = new System.Drawing.Size(350, 76);
             this.databasebtn.TabIndex = 13;
             this.databasebtn.Text = "Database";
@@ -210,7 +210,7 @@
             this.formsbtn.Image = ((System.Drawing.Image)(resources.GetObject("formsbtn.Image")));
             this.formsbtn.Location = new System.Drawing.Point(0, 431);
             this.formsbtn.Name = "formsbtn";
-            this.formsbtn.Padding = new System.Windows.Forms.Padding(15, 0, 16, 0);
+            this.formsbtn.Padding = new System.Windows.Forms.Padding(15, 0, 24, 0);
             this.formsbtn.Size = new System.Drawing.Size(350, 76);
             this.formsbtn.TabIndex = 12;
             this.formsbtn.Text = "Data Entry";
@@ -232,7 +232,7 @@
             this.settingsbtn.Image = global::Data_Storing_App.Properties.Resources.settings;
             this.settingsbtn.Location = new System.Drawing.Point(0, 735);
             this.settingsbtn.Name = "settingsbtn";
-            this.settingsbtn.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
+            this.settingsbtn.Padding = new System.Windows.Forms.Padding(34, 0, 5, 0);
             this.settingsbtn.Size = new System.Drawing.Size(350, 76);
             this.settingsbtn.TabIndex = 11;
             this.settingsbtn.Text = "Settings";
@@ -251,7 +251,7 @@
             this.homebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.homebtn.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homebtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(249)))));
-            this.homebtn.Image = global::Data_Storing_App.Properties.Resources.home;
+            this.homebtn.Image = global::Data_Storing_App.Properties.Resources.Home_1;
             this.homebtn.Location = new System.Drawing.Point(0, 355);
             this.homebtn.Name = "homebtn";
             this.homebtn.Size = new System.Drawing.Size(350, 76);
@@ -262,43 +262,43 @@
             this.homebtn.Click += new System.EventHandler(this.button1_Click);
             this.homebtn.Leave += new System.EventHandler(this.homebtn_Leave);
             // 
-            // metroPanel2
+            // usericonpnl
             // 
-            this.metroPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.metroPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metroPanel2.BackgroundImage")));
-            this.metroPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.metroPanel2.Controls.Add(this.metroPanel4);
-            this.metroPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroPanel2.HorizontalScrollbarBarColor = true;
-            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(0, 0);
-            this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(350, 303);
-            this.metroPanel2.TabIndex = 3;
-            this.metroPanel2.UseCustomBackColor = true;
-            this.metroPanel2.UseCustomForeColor = true;
-            this.metroPanel2.VerticalScrollbarBarColor = true;
-            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 10;
+            this.usericonpnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.usericonpnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("usericonpnl.BackgroundImage")));
+            this.usericonpnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.usericonpnl.Controls.Add(this.usernamepnl);
+            this.usericonpnl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.usericonpnl.HorizontalScrollbarBarColor = true;
+            this.usericonpnl.HorizontalScrollbarHighlightOnWheel = false;
+            this.usericonpnl.HorizontalScrollbarSize = 10;
+            this.usericonpnl.Location = new System.Drawing.Point(0, 0);
+            this.usericonpnl.Name = "usericonpnl";
+            this.usericonpnl.Size = new System.Drawing.Size(350, 303);
+            this.usericonpnl.TabIndex = 3;
+            this.usericonpnl.UseCustomBackColor = true;
+            this.usericonpnl.UseCustomForeColor = true;
+            this.usericonpnl.VerticalScrollbarBarColor = true;
+            this.usericonpnl.VerticalScrollbarHighlightOnWheel = false;
+            this.usericonpnl.VerticalScrollbarSize = 10;
             // 
-            // metroPanel4
+            // usernamepnl
             // 
-            this.metroPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.metroPanel4.Controls.Add(this.usernamelbl);
-            this.metroPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.metroPanel4.HorizontalScrollbarBarColor = true;
-            this.metroPanel4.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel4.HorizontalScrollbarSize = 10;
-            this.metroPanel4.Location = new System.Drawing.Point(0, 263);
-            this.metroPanel4.Name = "metroPanel4";
-            this.metroPanel4.Size = new System.Drawing.Size(350, 40);
-            this.metroPanel4.TabIndex = 3;
-            this.metroPanel4.UseCustomBackColor = true;
-            this.metroPanel4.UseCustomForeColor = true;
-            this.metroPanel4.VerticalScrollbarBarColor = true;
-            this.metroPanel4.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel4.VerticalScrollbarSize = 10;
+            this.usernamepnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.usernamepnl.Controls.Add(this.usernamelbl);
+            this.usernamepnl.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.usernamepnl.HorizontalScrollbarBarColor = true;
+            this.usernamepnl.HorizontalScrollbarHighlightOnWheel = false;
+            this.usernamepnl.HorizontalScrollbarSize = 10;
+            this.usernamepnl.Location = new System.Drawing.Point(0, 263);
+            this.usernamepnl.Name = "usernamepnl";
+            this.usernamepnl.Size = new System.Drawing.Size(350, 40);
+            this.usernamepnl.TabIndex = 3;
+            this.usernamepnl.UseCustomBackColor = true;
+            this.usernamepnl.UseCustomForeColor = true;
+            this.usernamepnl.VerticalScrollbarBarColor = true;
+            this.usernamepnl.VerticalScrollbarHighlightOnWheel = false;
+            this.usernamepnl.VerticalScrollbarSize = 10;
             // 
             // usernamelbl
             // 
@@ -327,12 +327,12 @@
             this.Text = "Home";
             this.metroPanel5.ResumeLayout(false);
             this.leftpnl.ResumeLayout(false);
-            this.metroPanel3.ResumeLayout(false);
-            this.metroPanel6.ResumeLayout(false);
-            this.metroPanel6.PerformLayout();
-            this.metroPanel2.ResumeLayout(false);
-            this.metroPanel4.ResumeLayout(false);
-            this.metroPanel4.PerformLayout();
+            this.userdetailpnl.ResumeLayout(false);
+            this.usertypepnl.ResumeLayout(false);
+            this.usertypepnl.PerformLayout();
+            this.usericonpnl.ResumeLayout(false);
+            this.usernamepnl.ResumeLayout(false);
+            this.usernamepnl.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -341,11 +341,11 @@
 
         private MetroFramework.Controls.MetroPanel metroPanel5;
         private MetroFramework.Controls.MetroPanel leftpnl;
-        private MetroFramework.Controls.MetroPanel metroPanel3;
-        private MetroFramework.Controls.MetroPanel metroPanel6;
+        private MetroFramework.Controls.MetroPanel userdetailpnl;
+        private MetroFramework.Controls.MetroPanel usertypepnl;
         private MetroFramework.Controls.MetroLabel typelbl;
-        private MetroFramework.Controls.MetroPanel metroPanel2;
-        private MetroFramework.Controls.MetroPanel metroPanel4;
+        private MetroFramework.Controls.MetroPanel usericonpnl;
+        private MetroFramework.Controls.MetroPanel usernamepnl;
         private MetroFramework.Controls.MetroLabel usernamelbl;
         private System.Windows.Forms.Button settingsbtn;
         private System.Windows.Forms.Button logoutbtn;
