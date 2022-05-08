@@ -100,5 +100,10 @@ namespace Data_Storing_App
         {
             settingsbtn.BackColor = Color.FromArgb(24, 30, 54);
         }
+
+        private void metroPanel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

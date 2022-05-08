@@ -1,6 +1,6 @@
 ﻿namespace Data_Storing_App
 {
-    partial class Home
+    partial class Manual
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Manual));
             this.metroPanel5 = new MetroFramework.Controls.MetroPanel();
             this.pnlNav = new System.Windows.Forms.Panel();
             this.leftpnl = new MetroFramework.Controls.MetroPanel();
@@ -43,17 +43,40 @@
             this.usericonpnl = new MetroFramework.Controls.MetroPanel();
             this.usernamepnl = new MetroFramework.Controls.MetroPanel();
             this.usernamelbl = new MetroFramework.Controls.MetroLabel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroPanel5.SuspendLayout();
             this.leftpnl.SuspendLayout();
             this.userdetailpnl.SuspendLayout();
             this.usertypepnl.SuspendLayout();
             this.usericonpnl.SuspendLayout();
             this.usernamepnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // metroPanel5
             // 
             this.metroPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            this.metroPanel5.Controls.Add(this.pictureBox1);
+            this.metroPanel5.Controls.Add(this.label10);
+            this.metroPanel5.Controls.Add(this.label9);
+            this.metroPanel5.Controls.Add(this.label8);
+            this.metroPanel5.Controls.Add(this.label7);
+            this.metroPanel5.Controls.Add(this.label6);
+            this.metroPanel5.Controls.Add(this.label5);
+            this.metroPanel5.Controls.Add(this.label4);
+            this.metroPanel5.Controls.Add(this.label3);
+            this.metroPanel5.Controls.Add(this.label2);
+            this.metroPanel5.Controls.Add(this.label1);
             this.metroPanel5.Controls.Add(this.pnlNav);
             this.metroPanel5.Controls.Add(this.leftpnl);
             this.metroPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -61,22 +84,21 @@
             this.metroPanel5.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel5.HorizontalScrollbarSize = 12;
             this.metroPanel5.Location = new System.Drawing.Point(0, 0);
-            this.metroPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.metroPanel5.Name = "metroPanel5";
-            this.metroPanel5.Size = new System.Drawing.Size(1845, 998);
-            this.metroPanel5.TabIndex = 4;
+            this.metroPanel5.Size = new System.Drawing.Size(1827, 951);
+            this.metroPanel5.TabIndex = 5;
             this.metroPanel5.UseCustomBackColor = true;
             this.metroPanel5.UseCustomForeColor = true;
             this.metroPanel5.VerticalScrollbarBarColor = true;
             this.metroPanel5.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel5.VerticalScrollbarSize = 13;
-            this.metroPanel5.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel5_Paint);
             // 
             // pnlNav
             // 
             this.pnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(249)))));
             this.pnlNav.Location = new System.Drawing.Point(0, 554);
-            this.pnlNav.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlNav.Margin = new System.Windows.Forms.Padding(4);
             this.pnlNav.Name = "pnlNav";
             this.pnlNav.Size = new System.Drawing.Size(7, 123);
             this.pnlNav.TabIndex = 3;
@@ -95,9 +117,9 @@
             this.leftpnl.HorizontalScrollbarHighlightOnWheel = false;
             this.leftpnl.HorizontalScrollbarSize = 12;
             this.leftpnl.Location = new System.Drawing.Point(0, 0);
-            this.leftpnl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.leftpnl.Margin = new System.Windows.Forms.Padding(4);
             this.leftpnl.Name = "leftpnl";
-            this.leftpnl.Size = new System.Drawing.Size(467, 998);
+            this.leftpnl.Size = new System.Drawing.Size(467, 951);
             this.leftpnl.TabIndex = 2;
             this.leftpnl.UseCustomBackColor = true;
             this.leftpnl.UseCustomForeColor = true;
@@ -117,7 +139,7 @@
             this.logoutbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(249)))));
             this.logoutbtn.Image = global::Data_Storing_App.Properties.Resources.logout;
             this.logoutbtn.Location = new System.Drawing.Point(0, 719);
-            this.logoutbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.logoutbtn.Margin = new System.Windows.Forms.Padding(4);
             this.logoutbtn.Name = "logoutbtn";
             this.logoutbtn.Padding = new System.Windows.Forms.Padding(9, 0, 31, 0);
             this.logoutbtn.Size = new System.Drawing.Size(467, 94);
@@ -125,8 +147,6 @@
             this.logoutbtn.Text = "Logout";
             this.logoutbtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.logoutbtn.UseVisualStyleBackColor = false;
-            this.logoutbtn.Click += new System.EventHandler(this.logoutbtn_Click);
-            this.logoutbtn.Leave += new System.EventHandler(this.logoutbtn_Leave);
             // 
             // databasebtn
             // 
@@ -140,7 +160,7 @@
             this.databasebtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(249)))));
             this.databasebtn.Image = global::Data_Storing_App.Properties.Resources.database;
             this.databasebtn.Location = new System.Drawing.Point(0, 625);
-            this.databasebtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.databasebtn.Margin = new System.Windows.Forms.Padding(4);
             this.databasebtn.Name = "databasebtn";
             this.databasebtn.Padding = new System.Windows.Forms.Padding(19, 0, 24, 0);
             this.databasebtn.Size = new System.Drawing.Size(467, 94);
@@ -148,8 +168,6 @@
             this.databasebtn.Text = "Database";
             this.databasebtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.databasebtn.UseVisualStyleBackColor = false;
-            this.databasebtn.Click += new System.EventHandler(this.databasebtn_Click);
-            this.databasebtn.Leave += new System.EventHandler(this.databasebtn_Leave);
             // 
             // formsbtn
             // 
@@ -163,7 +181,7 @@
             this.formsbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(249)))));
             this.formsbtn.Image = ((System.Drawing.Image)(resources.GetObject("formsbtn.Image")));
             this.formsbtn.Location = new System.Drawing.Point(0, 531);
-            this.formsbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.formsbtn.Margin = new System.Windows.Forms.Padding(4);
             this.formsbtn.Name = "formsbtn";
             this.formsbtn.Padding = new System.Windows.Forms.Padding(20, 0, 32, 0);
             this.formsbtn.Size = new System.Drawing.Size(467, 94);
@@ -171,8 +189,6 @@
             this.formsbtn.Text = "Data Entry";
             this.formsbtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.formsbtn.UseVisualStyleBackColor = false;
-            this.formsbtn.Click += new System.EventHandler(this.formsbtn_Click);
-            this.formsbtn.Leave += new System.EventHandler(this.formsbtn_Leave);
             // 
             // settingsbtn
             // 
@@ -185,8 +201,8 @@
             this.settingsbtn.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.settingsbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(249)))));
             this.settingsbtn.Image = global::Data_Storing_App.Properties.Resources.settings;
-            this.settingsbtn.Location = new System.Drawing.Point(0, 904);
-            this.settingsbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.settingsbtn.Location = new System.Drawing.Point(0, 857);
+            this.settingsbtn.Margin = new System.Windows.Forms.Padding(4);
             this.settingsbtn.Name = "settingsbtn";
             this.settingsbtn.Padding = new System.Windows.Forms.Padding(45, 0, 7, 0);
             this.settingsbtn.Size = new System.Drawing.Size(467, 94);
@@ -194,8 +210,6 @@
             this.settingsbtn.Text = "Settings";
             this.settingsbtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.settingsbtn.UseVisualStyleBackColor = false;
-            this.settingsbtn.Click += new System.EventHandler(this.settingsbtn_Click);
-            this.settingsbtn.Leave += new System.EventHandler(this.settingsbtn_Leave);
             // 
             // homebtn
             // 
@@ -209,15 +223,13 @@
             this.homebtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(249)))));
             this.homebtn.Image = global::Data_Storing_App.Properties.Resources.Home_1;
             this.homebtn.Location = new System.Drawing.Point(0, 437);
-            this.homebtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.homebtn.Margin = new System.Windows.Forms.Padding(4);
             this.homebtn.Name = "homebtn";
             this.homebtn.Size = new System.Drawing.Size(467, 94);
             this.homebtn.TabIndex = 3;
             this.homebtn.Text = "Home";
             this.homebtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.homebtn.UseVisualStyleBackColor = false;
-            this.homebtn.Click += new System.EventHandler(this.button1_Click);
-            this.homebtn.Leave += new System.EventHandler(this.homebtn_Leave);
             // 
             // userdetailpnl
             // 
@@ -229,7 +241,7 @@
             this.userdetailpnl.HorizontalScrollbarHighlightOnWheel = false;
             this.userdetailpnl.HorizontalScrollbarSize = 12;
             this.userdetailpnl.Location = new System.Drawing.Point(0, 0);
-            this.userdetailpnl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.userdetailpnl.Margin = new System.Windows.Forms.Padding(4);
             this.userdetailpnl.Name = "userdetailpnl";
             this.userdetailpnl.Size = new System.Drawing.Size(467, 437);
             this.userdetailpnl.TabIndex = 3;
@@ -248,7 +260,7 @@
             this.usertypepnl.HorizontalScrollbarHighlightOnWheel = false;
             this.usertypepnl.HorizontalScrollbarSize = 12;
             this.usertypepnl.Location = new System.Drawing.Point(0, 373);
-            this.usertypepnl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.usertypepnl.Margin = new System.Windows.Forms.Padding(4);
             this.usertypepnl.Name = "usertypepnl";
             this.usertypepnl.Size = new System.Drawing.Size(467, 48);
             this.usertypepnl.TabIndex = 5;
@@ -285,7 +297,7 @@
             this.usericonpnl.HorizontalScrollbarHighlightOnWheel = false;
             this.usericonpnl.HorizontalScrollbarSize = 12;
             this.usericonpnl.Location = new System.Drawing.Point(0, 0);
-            this.usericonpnl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.usericonpnl.Margin = new System.Windows.Forms.Padding(4);
             this.usericonpnl.Name = "usericonpnl";
             this.usericonpnl.Size = new System.Drawing.Size(467, 373);
             this.usericonpnl.TabIndex = 3;
@@ -304,7 +316,7 @@
             this.usernamepnl.HorizontalScrollbarHighlightOnWheel = false;
             this.usernamepnl.HorizontalScrollbarSize = 12;
             this.usernamepnl.Location = new System.Drawing.Point(0, 324);
-            this.usernamepnl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.usernamepnl.Margin = new System.Windows.Forms.Padding(4);
             this.usernamepnl.Name = "usernamepnl";
             this.usernamepnl.Size = new System.Drawing.Size(467, 49);
             this.usernamepnl.TabIndex = 3;
@@ -331,17 +343,151 @@
             this.usernamelbl.UseCustomBackColor = true;
             this.usernamelbl.UseCustomForeColor = true;
             // 
-            // Home
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(738, 71);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(825, 116);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "User Manual";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label10.Location = new System.Drawing.Point(518, 823);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(719, 36);
+            this.label10.TabIndex = 25;
+            this.label10.Text = "* additional help page for help related to the software.";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label9.Location = new System.Drawing.Point(518, 757);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(774, 36);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "* Account page to make changes for email and password.";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label8.Location = new System.Drawing.Point(518, 663);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(1135, 72);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "* There is a reminder feature available for the users to set remainders choosing " +
+    "there \r\n   specific time and date .";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label7.Location = new System.Drawing.Point(518, 569);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(993, 72);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "* These data which is transfered would be given the option of a hard copy \r\n   in" +
+    "to a pdf or jpg.";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label6.Location = new System.Drawing.Point(518, 513);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(1081, 36);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "* The entries are entered from the order form and then passed on to the database";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Location = new System.Drawing.Point(518, 414);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(1141, 72);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "* There will not be any restriction for entering data to the database but however" +
+    " some \r\n   databases would only have view and edit options.";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(518, 330);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(1008, 72);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "* These Created user accounts have > the ability to login to the system and \r\n   " +
+    "edit and insert data.";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(518, 259);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(727, 36);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "* To start with the Admin with create > User Accounts.";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2.Location = new System.Drawing.Point(475, 190);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(1340, 41);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "This guide helps you get started with Application and get more familiar with the " +
+    "features.";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1368, 67);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(143, 120);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Manual
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1845, 998);
+            this.ClientSize = new System.Drawing.Size(1827, 951);
             this.Controls.Add(this.metroPanel5);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MinimumSize = new System.Drawing.Size(1861, 1028);
-            this.Name = "Home";
-            this.Text = "Home";
+            this.Name = "Manual";
+            this.Text = "Manual";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.metroPanel5.ResumeLayout(false);
+            this.metroPanel5.PerformLayout();
             this.leftpnl.ResumeLayout(false);
             this.userdetailpnl.ResumeLayout(false);
             this.usertypepnl.ResumeLayout(false);
@@ -349,6 +495,7 @@
             this.usericonpnl.ResumeLayout(false);
             this.usernamepnl.ResumeLayout(false);
             this.usernamepnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -356,18 +503,29 @@
         #endregion
 
         private MetroFramework.Controls.MetroPanel metroPanel5;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel pnlNav;
         private MetroFramework.Controls.MetroPanel leftpnl;
+        private System.Windows.Forms.Button logoutbtn;
+        private System.Windows.Forms.Button databasebtn;
+        private System.Windows.Forms.Button formsbtn;
+        private System.Windows.Forms.Button settingsbtn;
+        private System.Windows.Forms.Button homebtn;
         private MetroFramework.Controls.MetroPanel userdetailpnl;
         private MetroFramework.Controls.MetroPanel usertypepnl;
         private MetroFramework.Controls.MetroLabel typelbl;
         private MetroFramework.Controls.MetroPanel usericonpnl;
         private MetroFramework.Controls.MetroPanel usernamepnl;
         private MetroFramework.Controls.MetroLabel usernamelbl;
-        private System.Windows.Forms.Button settingsbtn;
-        private System.Windows.Forms.Button logoutbtn;
-        private System.Windows.Forms.Button databasebtn;
-        private System.Windows.Forms.Button formsbtn;
-        private System.Windows.Forms.Button homebtn;
-        private System.Windows.Forms.Panel pnlNav;
     }
 }
