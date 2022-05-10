@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Data_Storing_App
 {
-    public partial class Database1 : Form
+    public partial class Form1 : Form
     {
-        public Database1()
+        public Form1()
         {
             InitializeComponent();
         }
