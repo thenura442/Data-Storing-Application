@@ -233,5 +233,10 @@ namespace Data_Storing_App
         {
             LoadUserData();
         }
+
+        private void datagridview1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
     }
 }
