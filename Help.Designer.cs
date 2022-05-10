@@ -82,12 +82,12 @@
             this.metroPanel5.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel5.VerticalScrollbarSize = 13;
             // 
-            // pnlNav
+            // pnlNav2
             // 
             this.pnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(249)))));
             this.pnlNav.Location = new System.Drawing.Point(0, 554);
             this.pnlNav.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlNav.Name = "pnlNav";
+            this.pnlNav.Name = "pnlNav2";
             this.pnlNav.Size = new System.Drawing.Size(7, 123);
             this.pnlNav.TabIndex = 3;
             // 
