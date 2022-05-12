@@ -192,7 +192,9 @@
     <Reference Include="SharpCompress, Version=0.30.1.0, Culture=neutral, PublicKeyToken=afb0a02973931d96, processorArchitecture=MSIL">
       <HintPath>packages\SharpCompress.0.30.1\lib\net461\SharpCompress.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
@@ -267,17 +269,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Databases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Databases.Designer.cs">
+      <DependentUpon>Databases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_Database.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee_Database.Designer.cs">
+      <DependentUpon>Employee_Database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee_Form.Designer.cs">
+      <DependentUpon>Employee_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms.Designer.cs">
+      <DependentUpon>Forms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\employeemodel.cs" />
+    <Compile Include="Models\resourcesmodel.cs" />
+    <Compile Include="Models\salarymodel.cs" />
+    <Compile Include="Models\userModel.cs" />
+    <Compile Include="Models\vehiclemodel.cs" />
     <Compile Include="Order_Database.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Order_Database.designer.cs">
       <DependentUpon>Order_Database.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Alert.cs">
       <SubType>Form</SubType>
@@ -306,11 +337,83 @@
     <Compile Include="Models\Order.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reminders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reminders.Designer.cs">
+      <DependentUpon>Reminders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources_Database.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources_Database.Designer.cs">
+      <DependentUpon>Resources_Database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources_Form.Designer.cs">
+      <DependentUpon>Resources_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Salary_Database.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Salary_Database.Designer.cs">
+      <DependentUpon>Salary_Database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Salary_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Salary_Form.Designer.cs">
+      <DependentUpon>Salary_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Database.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Database.Designer.cs">
+      <DependentUpon>User_Database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Form.Designer.cs">
+      <DependentUpon>User_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle_Database.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vehicle_Database.Designer.cs">
+      <DependentUpon>Vehicle_Database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vehicle_Form.Designer.cs">
+      <DependentUpon>Vehicle_Form.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Databases.resx">
+      <DependentUpon>Databases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee_Database.resx">
+      <DependentUpon>Employee_Database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee_Form.resx">
+      <DependentUpon>Employee_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms.resx">
+      <DependentUpon>Forms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Order_Database.resx">
       <DependentUpon>Order_Database.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Alert.resx">
       <DependentUpon>Form_Alert.cs</DependentUpon>
@@ -335,6 +438,36 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reminders.resx">
+      <DependentUpon>Reminders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources_Database.resx">
+      <DependentUpon>Resources_Database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources_Form.resx">
+      <DependentUpon>Resources_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Salary_Database.resx">
+      <DependentUpon>Salary_Database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Salary_Form.resx">
+      <DependentUpon>Salary_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Database.resx">
+      <DependentUpon>User_Database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Form.resx">
+      <DependentUpon>User_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehicle_Database.resx">
+      <DependentUpon>Vehicle_Database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehicle_Form.resx">
+      <DependentUpon>Vehicle_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Core\Compression\Snappy\lib\linux\libsnappy64.so" />
     <None Include="Core\Compression\Snappy\lib\osx\libsnappy64.dylib" />
     <None Include="Core\Compression\Zstandard\lib\linux\libzstd.so" />
@@ -450,6 +583,10 @@
     <Content Include="Core\Compression\Snappy\lib\win\snappy64.dll" />
     <Content Include="Core\Compression\Zstandard\lib\win\libzstd.dll" />
     <Content Include="mongocrypt.dll" />
+    <None Include="Resources\Sed-18-512.png" />
+    <None Include="Resources\lock-2.png" />
+    <None Include="Resources\Logo1.png" />
+    <None Include="Resources\Logo2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MongoDB.Libmongocrypt.1.3.0\build\MongoDB.Libmongocrypt.targets" Condition="Exists('packages\MongoDB.Libmongocrypt.1.3.0\build\MongoDB.Libmongocrypt.targets')" />

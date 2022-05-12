@@ -22,7 +22,9 @@ namespace Data_Storing_App.Models
 
         public string Description { get; set; }
 
-        public DateTime Date { get; set; }
+        public string Date { get; set; }
+
+        public string Month { get; set; }
 
         public double Perton { get; set; }
 

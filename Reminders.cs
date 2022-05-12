@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Data_Storing_App
 {
-    public partial class Form1 : Form
+    public partial class Reminders : Form
     {
-        public Form1()
+        public Reminders()
         {
             InitializeComponent();
         }

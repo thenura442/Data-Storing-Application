@@ -1,6 +1,6 @@
 ﻿namespace Data_Storing_App
 {
-    partial class Order_Database
+    partial class Salary_Database
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Order_Database));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Salary_Database));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
@@ -46,7 +46,6 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            this.pnlNav = new System.Windows.Forms.Panel();
             this.metroPanel5 = new MetroFramework.Controls.MetroPanel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroPanel9 = new MetroFramework.Controls.MetroPanel();
@@ -62,18 +61,12 @@
             this.datagridview1 = new System.Windows.Forms.DataGridView();
             this.metroPanel6 = new MetroFramework.Controls.MetroPanel();
             this.metroPanel7 = new MetroFramework.Controls.MetroPanel();
-            this.materialchktxt = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.pmtchktxt = new Bunifu.UI.WinForms.BunifuDropdown();
             this.datechktxt = new MetroFramework.Controls.MetroDateTime();
             this.monthchktxt = new Bunifu.UI.WinForms.BunifuDropdown();
             this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
             this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
-            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.pmtchk = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bb = new Bunifu.UI.WinForms.BunifuLabel();
-            this.materialchk = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.monthchk = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.datechk = new Bunifu.UI.WinForms.BunifuCheckBox();
             this.resetbtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -93,7 +86,7 @@
             this.usertypepnl = new MetroFramework.Controls.MetroPanel();
             this.usericonpnl = new MetroFramework.Controls.MetroPanel();
             this.usernamepnl = new MetroFramework.Controls.MetroPanel();
-            this.usernamelbl = new MetroFramework.Controls.MetroLabel();
+            this.pnlNav = new System.Windows.Forms.Panel();
             this.metroPanel5.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             this.metroPanel9.SuspendLayout();
@@ -109,16 +102,7 @@
             this.leftpnl.SuspendLayout();
             this.userdetailpnl.SuspendLayout();
             this.usericonpnl.SuspendLayout();
-            this.usernamepnl.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnlNav
-            // 
-            this.pnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(249)))));
-            this.pnlNav.Location = new System.Drawing.Point(0, 450);
-            this.pnlNav.Name = "pnlNav";
-            this.pnlNav.Size = new System.Drawing.Size(5, 100);
-            this.pnlNav.TabIndex = 3;
             // 
             // metroPanel5
             // 
@@ -133,7 +117,7 @@
             this.metroPanel5.Location = new System.Drawing.Point(0, 0);
             this.metroPanel5.Name = "metroPanel5";
             this.metroPanel5.Size = new System.Drawing.Size(1384, 961);
-            this.metroPanel5.TabIndex = 5;
+            this.metroPanel5.TabIndex = 6;
             this.metroPanel5.UseCustomBackColor = true;
             this.metroPanel5.UseCustomForeColor = true;
             this.metroPanel5.VerticalScrollbarBarColor = true;
@@ -214,7 +198,6 @@
             this.backbutton1.Name = "backbutton1";
             this.backbutton1.Size = new System.Drawing.Size(104, 115);
             this.backbutton1.TabIndex = 29;
-            this.backbutton1.Click += new System.EventHandler(this.backbutton1_Click);
             // 
             // metroPanel11
             // 
@@ -419,7 +402,7 @@
             this.cancel.TextMarginLeft = 0;
             this.cancel.TextPadding = new System.Windows.Forms.Padding(0);
             this.cancel.UseDefaultRadiusAndThickness = true;
-            this.cancel.Click += new System.EventHandler(this.cancel_Click_1);
+            this.cancel.Click += new System.EventHandler(this.cancel_Click);
             // 
             // dltonebtn
             // 
@@ -606,7 +589,7 @@
             this.dltbtn.Name = "dltbtn";
             this.dltbtn.Size = new System.Drawing.Size(104, 116);
             this.dltbtn.TabIndex = 17;
-            this.dltbtn.Click += new System.EventHandler(this.deletebutton1_Click);
+            this.dltbtn.Click += new System.EventHandler(this.dltbtn_Click);
             // 
             // metroPanel8
             // 
@@ -672,7 +655,6 @@
             this.datagridview1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.datagridview1.Size = new System.Drawing.Size(926, 480);
             this.datagridview1.TabIndex = 12;
-            this.datagridview1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridview1_CellContentClick);
             // 
             // metroPanel6
             // 
@@ -693,8 +675,6 @@
             // 
             // metroPanel7
             // 
-            this.metroPanel7.Controls.Add(this.materialchktxt);
-            this.metroPanel7.Controls.Add(this.pmtchktxt);
             this.metroPanel7.Controls.Add(this.datechktxt);
             this.metroPanel7.Controls.Add(this.monthchktxt);
             this.metroPanel7.Dock = System.Windows.Forms.DockStyle.Right;
@@ -711,105 +691,9 @@
             this.metroPanel7.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel7.VerticalScrollbarSize = 10;
             // 
-            // materialchktxt
-            // 
-            this.materialchktxt.BackColor = System.Drawing.Color.Transparent;
-            this.materialchktxt.BackgroundColor = System.Drawing.Color.White;
-            this.materialchktxt.BorderColor = System.Drawing.Color.Silver;
-            this.materialchktxt.BorderRadius = 2;
-            this.materialchktxt.Color = System.Drawing.Color.Silver;
-            this.materialchktxt.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.materialchktxt.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.materialchktxt.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.materialchktxt.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.materialchktxt.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.materialchktxt.DisabledIndicatorColor = System.Drawing.Color.Black;
-            this.materialchktxt.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.materialchktxt.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.materialchktxt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.materialchktxt.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.materialchktxt.FillDropDown = true;
-            this.materialchktxt.FillIndicator = true;
-            this.materialchktxt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.materialchktxt.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialchktxt.ForeColor = System.Drawing.Color.Black;
-            this.materialchktxt.FormattingEnabled = true;
-            this.materialchktxt.Icon = null;
-            this.materialchktxt.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.materialchktxt.IndicatorColor = System.Drawing.Color.Silver;
-            this.materialchktxt.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.materialchktxt.IndicatorThickness = 2;
-            this.materialchktxt.IsDropdownOpened = false;
-            this.materialchktxt.ItemBackColor = System.Drawing.Color.White;
-            this.materialchktxt.ItemBorderColor = System.Drawing.Color.White;
-            this.materialchktxt.ItemForeColor = System.Drawing.Color.Black;
-            this.materialchktxt.ItemHeight = 26;
-            this.materialchktxt.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.materialchktxt.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.materialchktxt.Items.AddRange(new object[] {
-            "Dust",
-            "1/2",
-            "3/4",
-            "C4"});
-            this.materialchktxt.ItemTopMargin = 3;
-            this.materialchktxt.Location = new System.Drawing.Point(457, 12);
-            this.materialchktxt.Name = "materialchktxt";
-            this.materialchktxt.Size = new System.Drawing.Size(120, 32);
-            this.materialchktxt.TabIndex = 165;
-            this.materialchktxt.Text = null;
-            this.materialchktxt.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.materialchktxt.TextLeftMargin = 5;
-            // 
-            // pmtchktxt
-            // 
-            this.pmtchktxt.BackColor = System.Drawing.Color.Transparent;
-            this.pmtchktxt.BackgroundColor = System.Drawing.Color.White;
-            this.pmtchktxt.BorderColor = System.Drawing.Color.Silver;
-            this.pmtchktxt.BorderRadius = 2;
-            this.pmtchktxt.Color = System.Drawing.Color.Silver;
-            this.pmtchktxt.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.pmtchktxt.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.pmtchktxt.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.pmtchktxt.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.pmtchktxt.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.pmtchktxt.DisabledIndicatorColor = System.Drawing.Color.Black;
-            this.pmtchktxt.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.pmtchktxt.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.pmtchktxt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.pmtchktxt.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.pmtchktxt.FillDropDown = true;
-            this.pmtchktxt.FillIndicator = true;
-            this.pmtchktxt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pmtchktxt.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pmtchktxt.ForeColor = System.Drawing.Color.Black;
-            this.pmtchktxt.FormattingEnabled = true;
-            this.pmtchktxt.Icon = null;
-            this.pmtchktxt.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.pmtchktxt.IndicatorColor = System.Drawing.Color.Silver;
-            this.pmtchktxt.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.pmtchktxt.IndicatorThickness = 2;
-            this.pmtchktxt.IsDropdownOpened = false;
-            this.pmtchktxt.ItemBackColor = System.Drawing.Color.White;
-            this.pmtchktxt.ItemBorderColor = System.Drawing.Color.White;
-            this.pmtchktxt.ItemForeColor = System.Drawing.Color.Black;
-            this.pmtchktxt.ItemHeight = 26;
-            this.pmtchktxt.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.pmtchktxt.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.pmtchktxt.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.pmtchktxt.ItemTopMargin = 3;
-            this.pmtchktxt.Location = new System.Drawing.Point(620, 12);
-            this.pmtchktxt.Name = "pmtchktxt";
-            this.pmtchktxt.Size = new System.Drawing.Size(120, 32);
-            this.pmtchktxt.TabIndex = 164;
-            this.pmtchktxt.Text = null;
-            this.pmtchktxt.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.pmtchktxt.TextLeftMargin = 5;
-            // 
             // datechktxt
             // 
-            this.datechktxt.Location = new System.Drawing.Point(33, 15);
+            this.datechktxt.Location = new System.Drawing.Point(374, 20);
             this.datechktxt.MinimumSize = new System.Drawing.Size(0, 29);
             this.datechktxt.Name = "datechktxt";
             this.datechktxt.Size = new System.Drawing.Size(198, 29);
@@ -865,7 +749,7 @@
             "November",
             "December"});
             this.monthchktxt.ItemTopMargin = 3;
-            this.monthchktxt.Location = new System.Drawing.Point(279, 12);
+            this.monthchktxt.Location = new System.Drawing.Point(620, 17);
             this.monthchktxt.Name = "monthchktxt";
             this.monthchktxt.Size = new System.Drawing.Size(120, 32);
             this.monthchktxt.TabIndex = 156;
@@ -892,12 +776,8 @@
             // 
             // metroPanel4
             // 
-            this.metroPanel4.Controls.Add(this.bunifuLabel3);
-            this.metroPanel4.Controls.Add(this.pmtchk);
             this.metroPanel4.Controls.Add(this.bunifuLabel2);
-            this.metroPanel4.Controls.Add(this.bunifuLabel1);
             this.metroPanel4.Controls.Add(this.bb);
-            this.metroPanel4.Controls.Add(this.materialchk);
             this.metroPanel4.Controls.Add(this.monthchk);
             this.metroPanel4.Controls.Add(this.datechk);
             this.metroPanel4.Controls.Add(this.resetbtn);
@@ -917,77 +797,6 @@
             this.metroPanel4.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel4.VerticalScrollbarSize = 10;
             // 
-            // bunifuLabel3
-            // 
-            this.bunifuLabel3.AllowParentOverrides = false;
-            this.bunifuLabel3.AutoEllipsis = false;
-            this.bunifuLabel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.bunifuLabel3.CursorType = null;
-            this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.bunifuLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(249)))));
-            this.bunifuLabel3.Location = new System.Drawing.Point(884, 75);
-            this.bunifuLabel3.Name = "bunifuLabel3";
-            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(73, 25);
-            this.bunifuLabel3.TabIndex = 161;
-            this.bunifuLabel3.Text = "Payment";
-            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // pmtchk
-            // 
-            this.pmtchk.AllowBindingControlAnimation = true;
-            this.pmtchk.AllowBindingControlColorChanges = false;
-            this.pmtchk.AllowBindingControlLocation = true;
-            this.pmtchk.AllowCheckBoxAnimation = false;
-            this.pmtchk.AllowCheckmarkAnimation = true;
-            this.pmtchk.AllowOnHoverStates = true;
-            this.pmtchk.AutoCheck = true;
-            this.pmtchk.BackColor = System.Drawing.Color.Transparent;
-            this.pmtchk.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pmtchk.BackgroundImage")));
-            this.pmtchk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pmtchk.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
-            this.pmtchk.BorderRadius = 12;
-            this.pmtchk.Checked = false;
-            this.pmtchk.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
-            this.pmtchk.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pmtchk.CustomCheckmarkImage = null;
-            this.pmtchk.Location = new System.Drawing.Point(851, 79);
-            this.pmtchk.MinimumSize = new System.Drawing.Size(17, 17);
-            this.pmtchk.Name = "pmtchk";
-            this.pmtchk.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.pmtchk.OnCheck.BorderRadius = 12;
-            this.pmtchk.OnCheck.BorderThickness = 2;
-            this.pmtchk.OnCheck.CheckBoxColor = System.Drawing.Color.DodgerBlue;
-            this.pmtchk.OnCheck.CheckmarkColor = System.Drawing.Color.White;
-            this.pmtchk.OnCheck.CheckmarkThickness = 2;
-            this.pmtchk.OnDisable.BorderColor = System.Drawing.Color.LightGray;
-            this.pmtchk.OnDisable.BorderRadius = 12;
-            this.pmtchk.OnDisable.BorderThickness = 2;
-            this.pmtchk.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.pmtchk.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
-            this.pmtchk.OnDisable.CheckmarkThickness = 2;
-            this.pmtchk.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.pmtchk.OnHoverChecked.BorderRadius = 12;
-            this.pmtchk.OnHoverChecked.BorderThickness = 2;
-            this.pmtchk.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.pmtchk.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
-            this.pmtchk.OnHoverChecked.CheckmarkThickness = 2;
-            this.pmtchk.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.pmtchk.OnHoverUnchecked.BorderRadius = 12;
-            this.pmtchk.OnHoverUnchecked.BorderThickness = 1;
-            this.pmtchk.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.pmtchk.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
-            this.pmtchk.OnUncheck.BorderRadius = 12;
-            this.pmtchk.OnUncheck.BorderThickness = 1;
-            this.pmtchk.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.pmtchk.Size = new System.Drawing.Size(21, 21);
-            this.pmtchk.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
-            this.pmtchk.TabIndex = 160;
-            this.pmtchk.ThreeState = false;
-            this.pmtchk.ToolTipText = null;
-            this.pmtchk.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.pmtchk_CheckedChanged);
-            // 
             // bunifuLabel2
             // 
             this.bunifuLabel2.AllowParentOverrides = false;
@@ -996,7 +805,7 @@
             this.bunifuLabel2.CursorType = null;
             this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.bunifuLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(249)))));
-            this.bunifuLabel2.Location = new System.Drawing.Point(560, 75);
+            this.bunifuLabel2.Location = new System.Drawing.Point(901, 78);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(56, 25);
@@ -1004,23 +813,6 @@
             this.bunifuLabel2.Text = "Month";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.bunifuLabel1.CursorType = null;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(249)))));
-            this.bunifuLabel1.Location = new System.Drawing.Point(724, 75);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(70, 25);
-            this.bunifuLabel1.TabIndex = 158;
-            this.bunifuLabel1.Text = "Material";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // bb
             // 
@@ -1030,7 +822,7 @@
             this.bb.CursorType = null;
             this.bb.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.bb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(249)))));
-            this.bb.Location = new System.Drawing.Point(409, 75);
+            this.bb.Location = new System.Drawing.Point(750, 78);
             this.bb.Name = "bb";
             this.bb.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bb.Size = new System.Drawing.Size(39, 25);
@@ -1038,60 +830,6 @@
             this.bb.Text = "Date";
             this.bb.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bb.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // materialchk
-            // 
-            this.materialchk.AllowBindingControlAnimation = true;
-            this.materialchk.AllowBindingControlColorChanges = false;
-            this.materialchk.AllowBindingControlLocation = true;
-            this.materialchk.AllowCheckBoxAnimation = false;
-            this.materialchk.AllowCheckmarkAnimation = true;
-            this.materialchk.AllowOnHoverStates = true;
-            this.materialchk.AutoCheck = true;
-            this.materialchk.BackColor = System.Drawing.Color.Transparent;
-            this.materialchk.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("materialchk.BackgroundImage")));
-            this.materialchk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.materialchk.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
-            this.materialchk.BorderRadius = 12;
-            this.materialchk.Checked = false;
-            this.materialchk.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
-            this.materialchk.Cursor = System.Windows.Forms.Cursors.Default;
-            this.materialchk.CustomCheckmarkImage = null;
-            this.materialchk.Location = new System.Drawing.Point(693, 79);
-            this.materialchk.MinimumSize = new System.Drawing.Size(17, 17);
-            this.materialchk.Name = "materialchk";
-            this.materialchk.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.materialchk.OnCheck.BorderRadius = 12;
-            this.materialchk.OnCheck.BorderThickness = 2;
-            this.materialchk.OnCheck.CheckBoxColor = System.Drawing.Color.DodgerBlue;
-            this.materialchk.OnCheck.CheckmarkColor = System.Drawing.Color.White;
-            this.materialchk.OnCheck.CheckmarkThickness = 2;
-            this.materialchk.OnDisable.BorderColor = System.Drawing.Color.LightGray;
-            this.materialchk.OnDisable.BorderRadius = 12;
-            this.materialchk.OnDisable.BorderThickness = 2;
-            this.materialchk.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.materialchk.OnDisable.CheckmarkColor = System.Drawing.Color.LightGray;
-            this.materialchk.OnDisable.CheckmarkThickness = 2;
-            this.materialchk.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.materialchk.OnHoverChecked.BorderRadius = 12;
-            this.materialchk.OnHoverChecked.BorderThickness = 2;
-            this.materialchk.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.materialchk.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
-            this.materialchk.OnHoverChecked.CheckmarkThickness = 2;
-            this.materialchk.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.materialchk.OnHoverUnchecked.BorderRadius = 12;
-            this.materialchk.OnHoverUnchecked.BorderThickness = 1;
-            this.materialchk.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.materialchk.OnUncheck.BorderColor = System.Drawing.Color.DarkGray;
-            this.materialchk.OnUncheck.BorderRadius = 12;
-            this.materialchk.OnUncheck.BorderThickness = 1;
-            this.materialchk.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
-            this.materialchk.Size = new System.Drawing.Size(21, 21);
-            this.materialchk.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
-            this.materialchk.TabIndex = 156;
-            this.materialchk.ThreeState = false;
-            this.materialchk.ToolTipText = null;
-            this.materialchk.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs>(this.materialchk_CheckedChanged);
             // 
             // monthchk
             // 
@@ -1111,7 +849,7 @@
             this.monthchk.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.monthchk.Cursor = System.Windows.Forms.Cursors.Default;
             this.monthchk.CustomCheckmarkImage = null;
-            this.monthchk.Location = new System.Drawing.Point(524, 79);
+            this.monthchk.Location = new System.Drawing.Point(865, 82);
             this.monthchk.MinimumSize = new System.Drawing.Size(17, 17);
             this.monthchk.Name = "monthchk";
             this.monthchk.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
@@ -1165,7 +903,7 @@
             this.datechk.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
             this.datechk.Cursor = System.Windows.Forms.Cursors.Default;
             this.datechk.CustomCheckmarkImage = null;
-            this.datechk.Location = new System.Drawing.Point(371, 79);
+            this.datechk.Location = new System.Drawing.Point(712, 82);
             this.datechk.MinimumSize = new System.Drawing.Size(17, 17);
             this.datechk.Name = "datechk";
             this.datechk.OnCheck.BorderColor = System.Drawing.Color.DodgerBlue;
@@ -1429,9 +1167,9 @@
             this.headerlabel1.Location = new System.Drawing.Point(48, 46);
             this.headerlabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.headerlabel1.Name = "headerlabel1";
-            this.headerlabel1.Size = new System.Drawing.Size(296, 50);
+            this.headerlabel1.Size = new System.Drawing.Size(301, 50);
             this.headerlabel1.TabIndex = 5;
-            this.headerlabel1.Text = "Order Database";
+            this.headerlabel1.Text = "Salary Database";
             // 
             // leftpnl
             // 
@@ -1654,7 +1392,6 @@
             // usernamepnl
             // 
             this.usernamepnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.usernamepnl.Controls.Add(this.usernamelbl);
             this.usernamepnl.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.usernamepnl.HorizontalScrollbarBarColor = true;
             this.usernamepnl.HorizontalScrollbarHighlightOnWheel = false;
@@ -1669,31 +1406,21 @@
             this.usernamepnl.VerticalScrollbarHighlightOnWheel = false;
             this.usernamepnl.VerticalScrollbarSize = 10;
             // 
-            // usernamelbl
+            // pnlNav
             // 
-            this.usernamelbl.AutoSize = true;
-            this.usernamelbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.usernamelbl.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.usernamelbl.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.usernamelbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(249)))));
-            this.usernamelbl.Location = new System.Drawing.Point(120, 4);
-            this.usernamelbl.Name = "usernamelbl";
-            this.usernamelbl.Size = new System.Drawing.Size(97, 25);
-            this.usernamelbl.TabIndex = 5;
-            this.usernamelbl.Text = "Username";
-            this.usernamelbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.usernamelbl.UseCustomBackColor = true;
-            this.usernamelbl.UseCustomForeColor = true;
+            this.pnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(249)))));
+            this.pnlNav.Location = new System.Drawing.Point(0, 450);
+            this.pnlNav.Name = "pnlNav";
+            this.pnlNav.Size = new System.Drawing.Size(5, 100);
+            this.pnlNav.TabIndex = 3;
             // 
-            // Order_Database
+            // Salary_Database
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1384, 961);
             this.Controls.Add(this.metroPanel5);
-            this.MinimumSize = new System.Drawing.Size(1400, 960);
-            this.Name = "Order_Database";
-            this.Text = "Data";
+            this.Name = "Salary_Database";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.metroPanel5.ResumeLayout(false);
             this.metroPanel1.ResumeLayout(false);
@@ -1712,16 +1439,42 @@
             this.leftpnl.ResumeLayout(false);
             this.userdetailpnl.ResumeLayout(false);
             this.usericonpnl.ResumeLayout(false);
-            this.usernamepnl.ResumeLayout(false);
-            this.usernamepnl.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel pnlNav;
+
         private MetroFramework.Controls.MetroPanel metroPanel5;
+        private MetroFramework.Controls.MetroPanel metroPanel1;
+        private MetroFramework.Controls.MetroPanel metroPanel9;
+        private MetroFramework.Controls.MetroPanel metroPanel12;
+        private Bunifu.Framework.UI.BunifuTileButton backbutton1;
+        private MetroFramework.Controls.MetroPanel metroPanel11;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton export;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton cancel;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton dltonebtn;
+        private Bunifu.UI.WinForms.BunifuTextBox txtbox;
+        private Bunifu.Framework.UI.BunifuTileButton dltbtn;
+        private MetroFramework.Controls.MetroPanel metroPanel8;
+        private System.Windows.Forms.DataGridView datagridview1;
+        private MetroFramework.Controls.MetroPanel metroPanel6;
+        private MetroFramework.Controls.MetroPanel metroPanel7;
+        private MetroFramework.Controls.MetroDateTime datechktxt;
+        private Bunifu.UI.WinForms.BunifuDropdown monthchktxt;
+        private MetroFramework.Controls.MetroPanel metroPanel3;
+        private MetroFramework.Controls.MetroPanel metroPanel4;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
+        private Bunifu.UI.WinForms.BunifuLabel bb;
+        private Bunifu.UI.WinForms.BunifuCheckBox monthchk;
+        private Bunifu.UI.WinForms.BunifuCheckBox datechk;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton resetbtn;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuIconButton searchbtn;
+        private Bunifu.UI.WinForms.BunifuTextBox searchtxtbox;
+        private MetroFramework.Controls.MetroPanel metroPanel2;
+        private System.Windows.Forms.Label headerlabel1;
         private MetroFramework.Controls.MetroPanel leftpnl;
+        private System.Windows.Forms.Panel pnlNav2;
         private System.Windows.Forms.Button logoutbtn;
         private System.Windows.Forms.Button reminderbtn;
         private System.Windows.Forms.Button databasebtn;
@@ -1732,40 +1485,6 @@
         private MetroFramework.Controls.MetroPanel usertypepnl;
         private MetroFramework.Controls.MetroPanel usericonpnl;
         private MetroFramework.Controls.MetroPanel usernamepnl;
-        private MetroFramework.Controls.MetroLabel usernamelbl;
-        private MetroFramework.Controls.MetroPanel metroPanel1;
-        private MetroFramework.Controls.MetroPanel metroPanel2;
-        private System.Windows.Forms.Label headerlabel1;
-        private MetroFramework.Controls.MetroPanel metroPanel3;
-        private MetroFramework.Controls.MetroPanel metroPanel4;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuIconButton searchbtn;
-        private Bunifu.UI.WinForms.BunifuTextBox searchtxtbox;
-        private MetroFramework.Controls.MetroPanel metroPanel6;
-        private MetroFramework.Controls.MetroPanel metroPanel7;
-        private MetroFramework.Controls.MetroPanel metroPanel8;
-        private System.Windows.Forms.DataGridView datagridview1;
-        private MetroFramework.Controls.MetroPanel metroPanel9;
-        private MetroFramework.Controls.MetroPanel metroPanel12;
-        private Bunifu.Framework.UI.BunifuTileButton backbutton1;
-        private MetroFramework.Controls.MetroPanel metroPanel11;
-        private Bunifu.Framework.UI.BunifuTileButton dltbtn;
-        private Bunifu.UI.WinForms.BunifuTextBox txtbox;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton dltonebtn;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton cancel;
-        private System.Windows.Forms.Panel pnlNav2;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton resetbtn;
-        private Bunifu.UI.WinForms.BunifuCheckBox datechk;
-        private Bunifu.UI.WinForms.BunifuCheckBox materialchk;
-        private Bunifu.UI.WinForms.BunifuCheckBox monthchk;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private Bunifu.UI.WinForms.BunifuLabel bb;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
-        private Bunifu.UI.WinForms.BunifuCheckBox pmtchk;
-        private Bunifu.UI.WinForms.BunifuDropdown monthchktxt;
-        private MetroFramework.Controls.MetroDateTime datechktxt;
-        private Bunifu.UI.WinForms.BunifuDropdown pmtchktxt;
-        private Bunifu.UI.WinForms.BunifuDropdown materialchktxt;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton export;
+        private System.Windows.Forms.Panel pnlNav;
     }
 }

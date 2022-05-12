@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Data_Storing_App.Models;
+using MongoDB.Driver;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,22 +9,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
-using Data_Storing_App.Models;
-using MongoDB.Driver;
 
 namespace Data_Storing_App
 {
-    public partial class Home : Form
+    public partial class Vehicle_Form : Form
     {
 
         // Creating connection and initialising the collection
         string connectionString = "mongodb://localhost:27017";
         public string databaseName = "DataStore";
-        public string collectionName = "Orders";
-        public IMongoCollection<ordermodel> orderCollection;
+        public string collectionName = "Vehicles";
+        public IMongoCollection<vehiclemodel> vehicleCollection;
 
         // creating a list of bridges
+        Home hm = new Home();
         Forms fm = new Forms();
         Databases dbs = new Databases();
         Reminders rms = new Reminders();
@@ -30,7 +30,8 @@ namespace Data_Storing_App
         Settings sts = new Settings();
 
 
-        
+
+
         //Accessing Alert
         public void Alert(string msg, Form_Alert.enmType type)
         {
@@ -39,16 +40,15 @@ namespace Data_Storing_App
         }
 
 
-
-        public Home()
+        public Vehicle_Form()
         {
             InitializeComponent();
 
             //starting the navigation
-            pnlNav.Height = homebtn.Height;
-            pnlNav.Top = homebtn.Top;
-            pnlNav.Left = homebtn.Left;
-            homebtn.BackColor = Color.FromArgb(46, 51, 93);
+            pnlNav.Height = formsbtn.Height;
+            pnlNav.Top = formsbtn.Top;
+            pnlNav.Left = formsbtn.Left;
+            formsbtn.BackColor = Color.FromArgb(46, 51, 93);
 
             ////Setting username and type on the menu
             //usernamelbl.Text = Login.username;
@@ -57,14 +57,10 @@ namespace Data_Storing_App
             //Initializing conncetion to database
             var client = new MongoClient(connectionString);
             var db = client.GetDatabase(databaseName);
-            orderCollection = db.GetCollection<ordermodel>(collectionName);
-
-            var currentuser = Login.user;
-            var currentusertype = Login.type;
+            vehicleCollection = db.GetCollection<vehiclemodel>(collectionName);
 
             updtbtn.Visible = false;
         }
-
 
         //*********************Setting Navigation of Menu Bar*****************************
         private void homebtn_Click(object sender, EventArgs e)
@@ -73,6 +69,9 @@ namespace Data_Storing_App
             pnlNav.Top = homebtn.Top;
             pnlNav.Left = homebtn.Left;
             homebtn.BackColor = Color.FromArgb(46, 51, 93);
+
+            this.Hide();
+            hm.Show();
         }
 
         private void formsbtn_Click(object sender, EventArgs e)
@@ -167,32 +166,21 @@ namespace Data_Storing_App
         {
             try
             {
-                DateTime datenow = DateTime.Now;
-                string date = datenow.ToString("MM/dd/yyyy");
-                string month = datenow.Month.ToString();
-
-
-                if (orderid.Text != "" & material.Text != "" & initialweight.Text != "" & loadedweight.Text != "" & quantity.Text != "" & lorryno.Text != "" & desc.Text != "" & priceton.Text != "" & pmttype.Text != "" & pmtstatus.Text != "" & pendingamt.Text != "" & totalamt.Text != "")
+                if (vehiclenotxt.Text != "" & typetxt.Text != "" & brandtxt.Text != "" & ownershiptxt.Text != "" & amttxt.Text != "" & drivertxt.Text != "" & statustxt.Text != "" & desctxt.Text != "")
                 {
-                    var ordermodel = new ordermodel
+                    var vehiclemodel = new vehiclemodel
                     {
-                        Order_ID = orderid.Text,
-                        Material = material.Text,
-                        Intial_Weight = Convert.ToDouble(initialweight.Text),
-                        Loaded_Weight = Convert.ToDouble(loadedweight.Text),
-                        Quantity = Convert.ToDouble(quantity.Text),
-                        Lorry_No = lorryno.Text,
-                        Description = desc.Text,
-                        Date = date,
-                        Month = month,
-                        Perton = Convert.ToDouble(priceton.Text),
-                        Type = pmttype.Text,
-                        Status = pmtstatus.Text,
-                        Pending_Amt = Convert.ToDouble(pendingamt.Text),
-                        Total_Amt = Convert.ToDouble(totalamt.Text),
+                        Vehicle_No = vehiclenotxt.Text,
+                        Vehicle_Type = typetxt.Text,
+                        Vehicle_Brand = brandtxt.Text,
+                        Vehicle_Ownership = ownershiptxt.Text,
+                        Amount = Convert.ToDouble(amttxt.Text),
+                        Vehicle_Driver = drivertxt.Text,
+                        Vehicle_Status = statustxt.Text,
+                        Description = desctxt.Text,
                     };
 
-                    orderCollection.InsertOneAsync(ordermodel);
+                    vehicleCollection.InsertOneAsync(vehiclemodel);
                     this.Alert("Insert Successful!", Form_Alert.enmType.Success);
                 }
                 else
@@ -202,7 +190,7 @@ namespace Data_Storing_App
             }
             catch (Exception ex)
             {
-                this.Alert("Critical Error! "+ex, Form_Alert.enmType.Error);
+                this.Alert("Critical Error! " + ex, Form_Alert.enmType.Error);
             }
             finally
             {
@@ -210,38 +198,35 @@ namespace Data_Storing_App
             }
         }
 
+
         //Search and its logic
         private void findbtn_Click(object sender, EventArgs e)
         {
             try
             {
-                var filterDefinition = Builders<ordermodel>.Filter.Eq(a => a.Order_ID, search.Text);
-                var projection = Builders<ordermodel>.Projection.Exclude("_id").Exclude("Date");
-                var orders = orderCollection.Find(filterDefinition).Project<ordermodel>(projection).FirstOrDefault();
+                var filterDefinition = Builders<vehiclemodel>.Filter.Eq(a => a.Vehicle_No, search.Text);
+                var projection = Builders<vehiclemodel>.Projection.Exclude("_id");
+                var vehicles = vehicleCollection.Find(filterDefinition).Project<vehiclemodel>(projection).FirstOrDefault();
 
-                if (orders != null)
+                if (vehicles != null)
                 {
-                    orderid.Text = orders.Order_ID;
-                    orderid.Enabled = false;
-                    material.Text = orders.Material;
-                    initialweight.Text = orders.Intial_Weight.ToString();
-                    loadedweight.Text = orders.Loaded_Weight.ToString();
-                    quantity.Text = orders.Quantity.ToString();
-                    lorryno.Text = orders.Lorry_No;
-                    desc.Text = orders.Description;
-                    priceton.Text = orders.Perton.ToString();
-                    pmttype.Text = orders.Type;
-                    pmtstatus.Text = orders.Status;
-                    pendingamt.Text = orders.Pending_Amt.ToString();
-                    totalamt.Text = orders.Total_Amt.ToString();
+                    vehiclenotxt.Text = vehicles.Vehicle_No;
+                    vehiclenotxt.Enabled = false;
+                    typetxt.Text = vehicles.Vehicle_Type;
+                    brandtxt.Text = vehicles.Vehicle_Brand;
+                    ownershiptxt.Text = vehicles.Vehicle_Ownership;
+                    amttxt.Text = vehicles.Amount.ToString();
+                    drivertxt.Text = vehicles.Vehicle_Driver;
+                    statustxt.Text = vehicles.Vehicle_Status;
+                    desctxt.Text = vehicles.Description;
 
-                    this.Alert("Record "+orders.Order_ID+" Found!", Form_Alert.enmType.Info);
+                    this.Alert("Vehicle No " + vehicles.Vehicle_No + " Found!", Form_Alert.enmType.Info);
                     updtbtn.Visible = true;
                     insertbtn.Visible = false;
                 }
                 else
                 {
-                    this.Alert("OrderID "+search.Text+" Not Found!", Form_Alert.enmType.Info);
+                    this.Alert("Vehicle No " + search.Text + " Not Found!", Form_Alert.enmType.Info);
                 }
             }
             catch (Exception ex)
@@ -250,35 +235,31 @@ namespace Data_Storing_App
             }
         }
 
-        
-        //Update and its logic
+
         private void updtbtn_Click(object sender, EventArgs e)
         {
             try
             {
-                var filterDefinition = Builders<ordermodel>.Filter.Eq(a => a.Order_ID, search.Text);
-                var projection = Builders<ordermodel>.Projection.Exclude("_id").Exclude("Date");
-                var ordersupdt = orderCollection.Find(filterDefinition).Project<ordermodel>(projection).FirstOrDefault();
+                var filterDefinition = Builders<vehiclemodel>.Filter.Eq(a => a.Vehicle_No, search.Text);
+                var projection = Builders<vehiclemodel>.Projection.Exclude("_id");
+                var vehiclesupdt = vehicleCollection.Find(filterDefinition).Project<vehiclemodel>(projection).FirstOrDefault();
 
-                if (ordersupdt != null)
+                if (vehiclesupdt != null)
                 {
-                    var filterupdate = Builders<ordermodel>.Filter.Eq(a => a.Order_ID, orderid.Text);
-                    var updateDefinition = Builders<ordermodel>.Update
-                        .Set(a => a.Material, material.Text)
-                        .Set(a => a.Intial_Weight, Convert.ToDouble(initialweight.Text))
-                        .Set(a => a.Loaded_Weight, Convert.ToDouble(loadedweight.Text))
-                        .Set(a => a.Quantity, Convert.ToDouble(quantity.Text))
-                        .Set(a => a.Lorry_No, lorryno.Text)
-                        .Set(a => a.Description, desc.Text)
-                        .Set(a => a.Perton, Convert.ToDouble(priceton.Text))
-                        .Set(a => a.Type, pmttype.Text)
-                        .Set(a => a.Status, pmtstatus.Text)
-                        .Set(a => a.Pending_Amt, Convert.ToDouble(pendingamt.Text))
-                        .Set(a => a.Total_Amt, Convert.ToDouble(totalamt.Text));
+                    var filterupdate = Builders<vehiclemodel>.Filter.Eq(a => a.Vehicle_No, vehiclenotxt.Text);
+                    var updateDefinition = Builders<vehiclemodel>.Update
+                        .Set(a => a.Vehicle_No, vehiclenotxt.Text)
+                        .Set(a => a.Vehicle_Type, typetxt.Text)
+                        .Set(a => a.Vehicle_Brand, brandtxt.Text)
+                        .Set(a => a.Vehicle_Ownership, ownershiptxt.Text)
+                        .Set(a => a.Amount, Convert.ToDouble(amttxt.Text))
+                        .Set(a => a.Vehicle_Driver, drivertxt.Text)
+                        .Set(a => a.Vehicle_Status, statustxt.Text)
+                        .Set(a => a.Description, desctxt.Text);
 
-                    orderCollection.UpdateOneAsync(filterupdate, updateDefinition);
+                    vehicleCollection.UpdateOneAsync(filterupdate, updateDefinition);
 
-                    this.Alert("Record "+orderid.Text+" Updated\nSuccessfully!", Form_Alert.enmType.Success);
+                    this.Alert("Record " + vehiclenotxt.Text + " Updated\nSuccessfully!", Form_Alert.enmType.Success);
                 }
                 else
                 {
@@ -295,33 +276,29 @@ namespace Data_Storing_App
             }
         }
 
-        //reset button
-        private void reset_Click(object sender, EventArgs e)
-        {
-            resetall();
-            this.Alert("All Fields Reset!", Form_Alert.enmType.Info);
-        }
-
         //Defining Method to reset all entries
         public void resetall()
         {
             search.Text = "";
-            orderid.Enabled = true;
-            orderid.Text = "";
-            material.Text = "";
-            initialweight.Text = "";
-            loadedweight.Text = "";
-            quantity.Text = "";
-            lorryno.Text = "";
-            desc.Text = "";
-            priceton.Text = "";
-            pmttype.Text = "";
-            pmtstatus.Text = "";
-            pendingamt.Text = "";
-            totalamt.Text = "";
+            vehiclenotxt.Enabled = true;
+            vehiclenotxt.Text = "";
+            typetxt.Text = "";
+            brandtxt.Text = "";
+            ownershiptxt.Text = "";
+            amttxt.Text = "";
+            drivertxt.Text = "";
+            statustxt.Text = "";
+            desctxt.Text = "";
 
-            updtbtn.Visible=false;
+
+            updtbtn.Visible = false;
             insertbtn.Visible = true;
+        }
+
+        private void reset_Click(object sender, EventArgs e)
+        {
+            resetall();
+            this.Alert("All Fields Reset!", Form_Alert.enmType.Info);
         }
     }
 }
