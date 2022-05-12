@@ -16,7 +16,7 @@ namespace Data_Storing_App
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Order_Database());
+            Application.Run(new Login());
         }
     }
 }
