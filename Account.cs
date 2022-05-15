@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Data_Storing_App.Models;
+using MongoDB.Driver;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,19 +12,28 @@ using System.Windows.Forms;
 
 namespace Data_Storing_App
 {
-    public partial class Settings : Form
+    public partial class Account : Form
     {
 
         string currentuser, currentusertype;
-        public Settings()
+
+        // Creating connection and initialising the collection
+        public string collectionName = "Users";
+        public IMongoCollection<usermodel> userCollection;
+
+        public void Alert(string msg, Form_Alert.enmType type)
+        {
+            Form_Alert frm = new Form_Alert();
+            frm.showAlert(msg, type);
+        }
+
+        public Account()
         {
             InitializeComponent();
 
             //starting the navigation
-            pnlNav.Height = settingsbtn.Height;
-            pnlNav.Top = settingsbtn.Top;
-            pnlNav.Left = settingsbtn.Left;
-            settingsbtn.BackColor = Color.FromArgb(46, 51, 93);
+
+            pnlNav.Visible = false;
 
             currentuser = staticmethods.getuser();
             currentusertype = staticmethods.gettype();
@@ -30,9 +41,15 @@ namespace Data_Storing_App
             usernamelbl.Text = currentuser;
             usertypelbl.Text = currentusertype;
 
+            var client = new MongoClient(staticmethods.getconnection());
+            var db = client.GetDatabase(staticmethods.getdatabase());
+            userCollection = db.GetCollection<usermodel>(collectionName);
+
+            showuserdetail();
+            resetall();
         }
 
-        private void homebtn_Click_1(object sender, EventArgs e)
+        private void homebtn_Click(object sender, EventArgs e)
         {
             pnlNav.Height = homebtn.Height;
             pnlNav.Top = homebtn.Top;
@@ -128,23 +145,65 @@ namespace Data_Storing_App
             settingsbtn.BackColor = Color.FromArgb(24, 30, 54);
         }
 
-        private void manual_Click(object sender, EventArgs e)
+        private void changepass_Click(object sender, EventArgs e)
         {
-            staticmethods.manualshow();
-            this.Hide();
+            passtxt.Visible = true;
+            repasstxt.Visible = true;
+            updtpassbtn.Visible = true;
+            cancelbtn.Visible = true;
+            changepass.Visible = false;
         }
 
-        private void help_Click(object sender, EventArgs e)
+        private void cancelbtn_Click(object sender, EventArgs e)
         {
-            staticmethods.helpshow();
-            this.Hide();
+            resetall();
         }
 
-        private void accountbtn_Click(object sender, EventArgs e)
+        public void showuserdetail()
         {
-            staticmethods.accountshow();
-            this.Hide();
+            var usern = staticmethods.getuser();
+
+            var filterDefinition = Builders<usermodel>.Filter.Eq(a => a.Username,usern);
+            var projection = Builders<usermodel>.Projection.Exclude("_id");
+            var users = userCollection.Find(filterDefinition).Project<usermodel>(projection).FirstOrDefault();
+
+            if(users != null)
+            {
+                user_namelbl.Text = users.Username;
+                u_typelbl.Text = users.User_Type;
+                u_emaillbl.Text = users.User_Email;
+                u_name.Text = users.Name;
+            }
+
         }
 
+        private void updtpassbtn_Click(object sender, EventArgs e)
+        {
+            if((passtxt.Text == repasstxt.Text) & (passtxt.Text != ""))
+            {
+                var usern = staticmethods.getuser();
+                var filterupdate = Builders<usermodel>.Filter.Eq(a => a.Username, usern);
+                var updateDefinition = Builders<usermodel>.Update
+                    .Set(a => a.Password, passtxt.Text);
+
+                userCollection.UpdateOneAsync(filterupdate, updateDefinition);
+
+                this.Alert("Password of " + usern + " Updated\nSuccessfully!", Form_Alert.enmType.Success);
+                resetall();
+            }
+            else
+            {
+                this.Alert("Please Enter Matching Passwords!", Form_Alert.enmType.Warning);
+            }
+        }
+
+        public void resetall()
+        {
+            passtxt.Visible = false;
+            repasstxt.Visible = false;
+            updtpassbtn.Visible = false;
+            cancelbtn.Visible = false;
+            changepass.Visible = true;
+        }
     }
 }

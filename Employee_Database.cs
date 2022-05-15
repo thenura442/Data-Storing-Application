@@ -15,20 +15,11 @@ namespace Data_Storing_App
 {
     public partial class Employee_Database : Form
     {
+        string currentuser, currentusertype;
 
-        // Creating connection and initialising the collection
-        string connectionString = "mongodb://localhost:27017";
-        public string databaseName = "DataStore";
+
         public string collectionName = "Employees";
         public IMongoCollection<employeemodel> employeeCollection;
-
-        // creating a list of bridges
-        Home hm = new Home();
-        Forms fm = new Forms();
-        Databases dbs = new Databases();
-        Reminders rms = new Reminders();
-        Login lg = new Login();
-        Settings sts = new Settings();
 
 
 
@@ -50,9 +41,17 @@ namespace Data_Storing_App
             databasebtn.BackColor = Color.FromArgb(46, 51, 93);
 
             //Initializing conncetion to database
-            var client = new MongoClient(connectionString);
-            var db = client.GetDatabase(databaseName);
+            var client = new MongoClient(staticmethods.getconnection());
+            var db = client.GetDatabase(staticmethods.getdatabase());
             employeeCollection = db.GetCollection<employeemodel>(collectionName);
+
+
+            currentuser = staticmethods.getuser();
+            currentusertype = staticmethods.gettype();
+
+            usernamelbl.Text = currentuser;
+            usertypelbl.Text = currentusertype;
+
 
             //Setting some buttons to be invisible
             invisible();
@@ -69,8 +68,8 @@ namespace Data_Storing_App
             pnlNav2.Left = homebtn.Left;
             homebtn.BackColor = Color.FromArgb(46, 51, 93);
 
+            staticmethods.homeshow();
             this.Hide();
-            hm.Show();
         }
 
         private void formsbtn_Click(object sender, EventArgs e)
@@ -80,8 +79,8 @@ namespace Data_Storing_App
             pnlNav2.Left = formsbtn.Left;
             formsbtn.BackColor = Color.FromArgb(46, 51, 93);
 
+            staticmethods.formsshow();
             this.Hide();
-            fm.Show();
         }
 
         private void databasebtn_Click(object sender, EventArgs e)
@@ -91,8 +90,8 @@ namespace Data_Storing_App
             pnlNav2.Left = databasebtn.Left;
             databasebtn.BackColor = Color.FromArgb(46, 51, 93);
 
+            staticmethods.databaseshow();
             this.Hide();
-            dbs.Show();
         }
 
         private void reminderbtn_Click(object sender, EventArgs e)
@@ -102,8 +101,8 @@ namespace Data_Storing_App
             pnlNav2.Left = reminderbtn.Left;
             reminderbtn.BackColor = Color.FromArgb(46, 51, 93);
 
+            staticmethods.remindershow();
             this.Hide();
-            rms.Show();
         }
 
         private void logoutbtn_Click(object sender, EventArgs e)
@@ -113,8 +112,8 @@ namespace Data_Storing_App
             pnlNav2.Left = logoutbtn.Left;
             logoutbtn.BackColor = Color.FromArgb(46, 51, 93);
 
+            staticmethods.logoutshow();
             this.Hide();
-            lg.Show();
         }
 
         private void settingsbtn_Click(object sender, EventArgs e)
@@ -124,8 +123,8 @@ namespace Data_Storing_App
             pnlNav2.Left = settingsbtn.Left;
             settingsbtn.BackColor = Color.FromArgb(46, 51, 93);
 
+            staticmethods.settingsshow();
             this.Hide();
-            sts.Show();
         }
 
 
@@ -448,8 +447,8 @@ namespace Data_Storing_App
 
         private void backbutton1_Click(object sender, EventArgs e)
         {
+            staticmethods.databaseshow();
             this.Hide();
-            dbs.Show();
         }
     }
 }

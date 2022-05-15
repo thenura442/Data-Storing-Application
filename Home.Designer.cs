@@ -81,8 +81,10 @@
             this.homebtn = new System.Windows.Forms.Button();
             this.userdetailpnl = new MetroFramework.Controls.MetroPanel();
             this.usertypepnl = new MetroFramework.Controls.MetroPanel();
+            this.usertypelbl = new Bunifu.UI.WinForms.BunifuLabel();
             this.usericonpnl = new MetroFramework.Controls.MetroPanel();
             this.usernamepnl = new MetroFramework.Controls.MetroPanel();
+            this.usernamelbl = new Bunifu.UI.WinForms.BunifuLabel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.headerlabel1 = new System.Windows.Forms.Label();
             this.metroPanel6 = new MetroFramework.Controls.MetroPanel();
@@ -131,7 +133,9 @@
             this.metroPanel5 = new MetroFramework.Controls.MetroPanel();
             this.leftpnl.SuspendLayout();
             this.userdetailpnl.SuspendLayout();
+            this.usertypepnl.SuspendLayout();
             this.usericonpnl.SuspendLayout();
+            this.usernamepnl.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             this.metroPanel6.SuspendLayout();
             this.metroPanel2.SuspendLayout();
@@ -334,6 +338,7 @@
             // usertypepnl
             // 
             this.usertypepnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.usertypepnl.Controls.Add(this.usertypelbl);
             this.usertypepnl.Dock = System.Windows.Forms.DockStyle.Top;
             this.usertypepnl.HorizontalScrollbarBarColor = true;
             this.usertypepnl.HorizontalScrollbarHighlightOnWheel = false;
@@ -347,6 +352,25 @@
             this.usertypepnl.VerticalScrollbarBarColor = true;
             this.usertypepnl.VerticalScrollbarHighlightOnWheel = false;
             this.usertypepnl.VerticalScrollbarSize = 10;
+            // 
+            // usertypelbl
+            // 
+            this.usertypelbl.AllowParentOverrides = false;
+            this.usertypelbl.AutoEllipsis = false;
+            this.usertypelbl.AutoSize = false;
+            this.usertypelbl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.usertypelbl.CursorType = null;
+            this.usertypelbl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.usertypelbl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usertypelbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(249)))));
+            this.usertypelbl.Location = new System.Drawing.Point(0, 0);
+            this.usertypelbl.Name = "usertypelbl";
+            this.usertypelbl.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.usertypelbl.Size = new System.Drawing.Size(350, 52);
+            this.usertypelbl.TabIndex = 141;
+            this.usertypelbl.Text = "Type";
+            this.usertypelbl.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.usertypelbl.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // usericonpnl
             // 
@@ -371,6 +395,7 @@
             // usernamepnl
             // 
             this.usernamepnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.usernamepnl.Controls.Add(this.usernamelbl);
             this.usernamepnl.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.usernamepnl.HorizontalScrollbarBarColor = true;
             this.usernamepnl.HorizontalScrollbarHighlightOnWheel = false;
@@ -384,6 +409,25 @@
             this.usernamepnl.VerticalScrollbarBarColor = true;
             this.usernamepnl.VerticalScrollbarHighlightOnWheel = false;
             this.usernamepnl.VerticalScrollbarSize = 10;
+            // 
+            // usernamelbl
+            // 
+            this.usernamelbl.AllowParentOverrides = false;
+            this.usernamelbl.AutoEllipsis = false;
+            this.usernamelbl.AutoSize = false;
+            this.usernamelbl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.usernamelbl.CursorType = null;
+            this.usernamelbl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.usernamelbl.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernamelbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(249)))));
+            this.usernamelbl.Location = new System.Drawing.Point(0, 0);
+            this.usernamelbl.Name = "usernamelbl";
+            this.usernamelbl.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.usernamelbl.Size = new System.Drawing.Size(350, 47);
+            this.usernamelbl.TabIndex = 140;
+            this.usernamelbl.Text = "Username";
+            this.usernamelbl.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.usernamelbl.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // metroPanel1
             // 
@@ -2027,13 +2071,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1384, 1061);
             this.Controls.Add(this.metroPanel5);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1400, 1000);
             this.Name = "Home";
-            this.Text = "Home";
+            this.Text = "ART DataStore";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.leftpnl.ResumeLayout(false);
             this.userdetailpnl.ResumeLayout(false);
+            this.usertypepnl.ResumeLayout(false);
             this.usericonpnl.ResumeLayout(false);
+            this.usernamepnl.ResumeLayout(false);
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
             this.metroPanel6.ResumeLayout(false);
@@ -2127,5 +2174,7 @@
         private Bunifu.Framework.UI.BunifuTileButton insertbtn;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton findbtn;
         private MetroFramework.Controls.MetroPanel metroPanel5;
+        private Bunifu.UI.WinForms.BunifuLabel usernamelbl;
+        private Bunifu.UI.WinForms.BunifuLabel usertypelbl;
     }
 }

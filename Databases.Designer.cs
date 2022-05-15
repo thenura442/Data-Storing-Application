@@ -53,14 +53,18 @@
             this.homebtn = new System.Windows.Forms.Button();
             this.userdetailpnl = new MetroFramework.Controls.MetroPanel();
             this.usertypepnl = new MetroFramework.Controls.MetroPanel();
+            this.usertypelbl = new Bunifu.UI.WinForms.BunifuLabel();
             this.usericonpnl = new MetroFramework.Controls.MetroPanel();
             this.usernamepnl = new MetroFramework.Controls.MetroPanel();
+            this.usernamelbl = new Bunifu.UI.WinForms.BunifuLabel();
             this.metroPanel5.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             this.leftpnl.SuspendLayout();
             this.userdetailpnl.SuspendLayout();
+            this.usertypepnl.SuspendLayout();
             this.usericonpnl.SuspendLayout();
+            this.usernamepnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroPanel5
@@ -153,7 +157,7 @@
             this.salarydb.IdleIconLeftImage = null;
             this.salarydb.IdleIconRightImage = null;
             this.salarydb.IndicateFocus = false;
-            this.salarydb.Location = new System.Drawing.Point(729, 147);
+            this.salarydb.Location = new System.Drawing.Point(688, 178);
             this.salarydb.Name = "salarydb";
             this.salarydb.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.salarydb.OnDisabledState.BorderRadius = 1;
@@ -245,7 +249,7 @@
             this.userdb.IdleIconLeftImage = null;
             this.userdb.IdleIconRightImage = null;
             this.userdb.IndicateFocus = false;
-            this.userdb.Location = new System.Drawing.Point(491, 316);
+            this.userdb.Location = new System.Drawing.Point(450, 347);
             this.userdb.Name = "userdb";
             this.userdb.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.userdb.OnDisabledState.BorderRadius = 1;
@@ -337,7 +341,7 @@
             this.employeedb.IdleIconLeftImage = null;
             this.employeedb.IdleIconRightImage = null;
             this.employeedb.IndicateFocus = false;
-            this.employeedb.Location = new System.Drawing.Point(729, 495);
+            this.employeedb.Location = new System.Drawing.Point(688, 526);
             this.employeedb.Name = "employeedb";
             this.employeedb.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.employeedb.OnDisabledState.BorderRadius = 1;
@@ -429,7 +433,7 @@
             this.vehicledb.IdleIconLeftImage = null;
             this.vehicledb.IdleIconRightImage = null;
             this.vehicledb.IndicateFocus = false;
-            this.vehicledb.Location = new System.Drawing.Point(255, 495);
+            this.vehicledb.Location = new System.Drawing.Point(214, 526);
             this.vehicledb.Name = "vehicledb";
             this.vehicledb.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.vehicledb.OnDisabledState.BorderRadius = 1;
@@ -521,7 +525,7 @@
             this.resourcesdb.IdleIconLeftImage = null;
             this.resourcesdb.IdleIconRightImage = null;
             this.resourcesdb.IndicateFocus = false;
-            this.resourcesdb.Location = new System.Drawing.Point(255, 147);
+            this.resourcesdb.Location = new System.Drawing.Point(214, 178);
             this.resourcesdb.Name = "resourcesdb";
             this.resourcesdb.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.resourcesdb.OnDisabledState.BorderRadius = 1;
@@ -778,6 +782,7 @@
             // usertypepnl
             // 
             this.usertypepnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.usertypepnl.Controls.Add(this.usertypelbl);
             this.usertypepnl.Dock = System.Windows.Forms.DockStyle.Top;
             this.usertypepnl.HorizontalScrollbarBarColor = true;
             this.usertypepnl.HorizontalScrollbarHighlightOnWheel = false;
@@ -791,6 +796,25 @@
             this.usertypepnl.VerticalScrollbarBarColor = true;
             this.usertypepnl.VerticalScrollbarHighlightOnWheel = false;
             this.usertypepnl.VerticalScrollbarSize = 10;
+            // 
+            // usertypelbl
+            // 
+            this.usertypelbl.AllowParentOverrides = false;
+            this.usertypelbl.AutoEllipsis = false;
+            this.usertypelbl.AutoSize = false;
+            this.usertypelbl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.usertypelbl.CursorType = null;
+            this.usertypelbl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.usertypelbl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usertypelbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(249)))));
+            this.usertypelbl.Location = new System.Drawing.Point(0, 0);
+            this.usertypelbl.Name = "usertypelbl";
+            this.usertypelbl.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.usertypelbl.Size = new System.Drawing.Size(350, 52);
+            this.usertypelbl.TabIndex = 142;
+            this.usertypelbl.Text = "Type";
+            this.usertypelbl.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.usertypelbl.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // usericonpnl
             // 
@@ -815,6 +839,7 @@
             // usernamepnl
             // 
             this.usernamepnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.usernamepnl.Controls.Add(this.usernamelbl);
             this.usernamepnl.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.usernamepnl.HorizontalScrollbarBarColor = true;
             this.usernamepnl.HorizontalScrollbarHighlightOnWheel = false;
@@ -829,6 +854,25 @@
             this.usernamepnl.VerticalScrollbarHighlightOnWheel = false;
             this.usernamepnl.VerticalScrollbarSize = 10;
             // 
+            // usernamelbl
+            // 
+            this.usernamelbl.AllowParentOverrides = false;
+            this.usernamelbl.AutoEllipsis = false;
+            this.usernamelbl.AutoSize = false;
+            this.usernamelbl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.usernamelbl.CursorType = null;
+            this.usernamelbl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.usernamelbl.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernamelbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(249)))));
+            this.usernamelbl.Location = new System.Drawing.Point(0, 0);
+            this.usernamelbl.Name = "usernamelbl";
+            this.usernamelbl.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.usernamelbl.Size = new System.Drawing.Size(350, 47);
+            this.usernamelbl.TabIndex = 141;
+            this.usernamelbl.Text = "Username";
+            this.usernamelbl.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.usernamelbl.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // Databases
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -837,6 +881,7 @@
             this.Controls.Add(this.metroPanel5);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Databases";
+            this.Text = "ART DataStore";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.metroPanel5.ResumeLayout(false);
             this.metroPanel2.ResumeLayout(false);
@@ -844,7 +889,9 @@
             this.metroPanel1.PerformLayout();
             this.leftpnl.ResumeLayout(false);
             this.userdetailpnl.ResumeLayout(false);
+            this.usertypepnl.ResumeLayout(false);
             this.usericonpnl.ResumeLayout(false);
+            this.usernamepnl.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -865,12 +912,14 @@
         private MetroFramework.Controls.MetroPanel userdetailpnl;
         private MetroFramework.Controls.MetroPanel usertypepnl;
         private MetroFramework.Controls.MetroPanel usericonpnl;
-        private MetroFramework.Controls.MetroPanel usernamepnl;
         private MetroFramework.Controls.MetroPanel metroPanel2;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton salarydb;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton userdb;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton employeedb;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton vehicledb;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton resourcesdb;
+        private Bunifu.UI.WinForms.BunifuLabel usertypelbl;
+        private MetroFramework.Controls.MetroPanel usernamepnl;
+        private Bunifu.UI.WinForms.BunifuLabel usernamelbl;
     }
 }

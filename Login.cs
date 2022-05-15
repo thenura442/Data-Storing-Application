@@ -15,13 +15,9 @@ namespace Data_Storing_App
     public partial class Login : Form
     {
 
-        // Creating connection and initialising the collection
-        string connectionString = "mongodb://localhost:27017";
-        public string databaseName = "DataStore";
+        // Intializing Conenection Name
         public string collectionName = "Users";
         public IMongoCollection<usermodel> userCollection;
-
-        public static string user = "", type = "";
 
         //Accessing Alert
         public void Alert(string msg, Form_Alert.enmType type)
@@ -29,45 +25,54 @@ namespace Data_Storing_App
             Form_Alert frm = new Form_Alert();
             frm.showAlert(msg, type);
         }
+
+
         public Login()
         {
             InitializeComponent();
 
-            var client = new MongoClient(connectionString);
-            var db = client.GetDatabase(databaseName);
+            var client = new MongoClient(staticmethods.getconnection());
+            var db = client.GetDatabase(staticmethods.getdatabase());
             userCollection = db.GetCollection<usermodel>(collectionName);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(usernametxt.Text != "" & userpasstxt.Text != "")
+            try
             {
-                var checkuser = Builders<usermodel>.Filter.Eq(a => a.Username, usernametxt.Text);
-                var checkpass = Builders<usermodel>.Filter.Eq(a => a.Password, userpasstxt.Text);
-
-                var filterDefinition = checkuser & checkpass;
-                var projection = Builders<usermodel>.Projection.Exclude("_id");
-                var users = userCollection.Find(filterDefinition).Project<usermodel>(projection).FirstOrDefault();
-
-                if (users != null)
+                if (usernametxt.Text != "" & userpasstxt.Text != "")
                 {
-                    type = users.User_Type;
-                    user = users.Username;
-                    this.Alert("Welcome Back " + user + "!", Form_Alert.enmType.Info);
+                    var checkuser = Builders<usermodel>.Filter.Eq(a => a.Username, usernametxt.Text);
+                    var checkpass = Builders<usermodel>.Filter.Eq(a => a.Password, userpasstxt.Text);
 
-                    Home home = new Home();
+                    var filterDefinition = checkuser & checkpass;
+                    var projection = Builders<usermodel>.Projection.Exclude("_id");
+                    var users = userCollection.Find(filterDefinition).Project<usermodel>(projection).FirstOrDefault();
 
-                    home.Show();
-                    this.Hide();
+                    if (users != null)
+                    {
+                        staticmethods.setuser(users.Username);
+                        staticmethods.settype(users.User_Type);
+                        this.Alert("Welcome Back " + users.Username + "!", Form_Alert.enmType.Info);
+
+                        Home home = new Home();
+
+                        home.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        this.Alert("Please Check Your Credentials!", Form_Alert.enmType.Warning);
+                    }
                 }
                 else
                 {
-                    this.Alert("Please Check Your Credentials!", Form_Alert.enmType.Warning);
+                    this.Alert("Please Fill All Fields!", Form_Alert.enmType.Warning);
                 }
             }
-            else
+            catch (Exception ex)
             {
-                this.Alert("Please Fill All Fields!", Form_Alert.enmType.Warning);
+                this.Alert("Error! -"+ex, Form_Alert.enmType.Warning);
             }
         }
 
@@ -81,10 +86,5 @@ namespace Data_Storing_App
             this.Close();
         }
 
-        public static void deleteuser()
-        {
-            user = null;
-            type = null;
-        }
     }
 }

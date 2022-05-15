@@ -129,7 +129,7 @@
             this.userpasstxt.DefaultFont = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userpasstxt.DefaultText = "";
             this.userpasstxt.FillColor = System.Drawing.Color.White;
-            this.userpasstxt.HideSelection = true;
+            this.userpasstxt.HideSelection = false;
             this.userpasstxt.IconLeft = null;
             this.userpasstxt.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
             this.userpasstxt.IconPadding = 10;
@@ -163,9 +163,9 @@
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.userpasstxt.OnIdleState = stateProperties12;
             this.userpasstxt.Padding = new System.Windows.Forms.Padding(3);
-            this.userpasstxt.PasswordChar = '\0';
+            this.userpasstxt.PasswordChar = '●';
             this.userpasstxt.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.userpasstxt.PlaceholderText = "Enter text";
+            this.userpasstxt.PlaceholderText = "Enter Password";
             this.userpasstxt.ReadOnly = false;
             this.userpasstxt.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.userpasstxt.SelectedText = "";
@@ -179,7 +179,7 @@
             this.userpasstxt.TextMarginBottom = 0;
             this.userpasstxt.TextMarginLeft = 3;
             this.userpasstxt.TextMarginTop = 1;
-            this.userpasstxt.TextPlaceholder = "Enter text";
+            this.userpasstxt.TextPlaceholder = "Enter Password";
             this.userpasstxt.UseSystemPasswordChar = false;
             this.userpasstxt.WordWrap = true;
             // 
@@ -240,7 +240,7 @@
             this.usernametxt.Padding = new System.Windows.Forms.Padding(3);
             this.usernametxt.PasswordChar = '\0';
             this.usernametxt.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.usernametxt.PlaceholderText = "Enter text";
+            this.usernametxt.PlaceholderText = "Enter Username";
             this.usernametxt.ReadOnly = false;
             this.usernametxt.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.usernametxt.SelectedText = "";
@@ -254,7 +254,7 @@
             this.usernametxt.TextMarginBottom = 0;
             this.usernametxt.TextMarginLeft = 3;
             this.usernametxt.TextMarginTop = 1;
-            this.usernametxt.TextPlaceholder = "Enter text";
+            this.usernametxt.TextPlaceholder = "Enter Username";
             this.usernametxt.UseSystemPasswordChar = false;
             this.usernametxt.WordWrap = true;
             // 
@@ -304,9 +304,10 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login3";
+            this.Text = "ART DataStore";
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
