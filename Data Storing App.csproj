@@ -269,6 +269,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account.Designer.cs">
+      <DependentUpon>Account.cs</DependentUpon>
+    </Compile>
     <Compile Include="Databases.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -300,6 +306,7 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\employeemodel.cs" />
+    <Compile Include="Models\remindermodel.cs" />
     <Compile Include="Models\resourcesmodel.cs" />
     <Compile Include="Models\salarymodel.cs" />
     <Compile Include="Models\userModel.cs" />
@@ -373,6 +380,7 @@
     <Compile Include="Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
+    <Compile Include="staticmethods.cs" />
     <Compile Include="User_Database.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -397,6 +405,9 @@
     <Compile Include="Vehicle_Form.Designer.cs">
       <DependentUpon>Vehicle_Form.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Account.resx">
+      <DependentUpon>Account.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Databases.resx">
       <DependentUpon>Databases.cs</DependentUpon>
     </EmbeddedResource>

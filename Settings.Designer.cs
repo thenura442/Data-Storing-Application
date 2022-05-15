@@ -33,11 +33,13 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.metroPanel5 = new MetroFramework.Controls.MetroPanel();
+            this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.userdb = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.accountbtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.manual = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.help = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
             this.headerlabel1 = new System.Windows.Forms.Label();
             this.leftpnl = new MetroFramework.Controls.MetroPanel();
             this.pnlNav = new System.Windows.Forms.Panel();
@@ -49,22 +51,26 @@
             this.homebtn = new System.Windows.Forms.Button();
             this.userdetailpnl = new MetroFramework.Controls.MetroPanel();
             this.usertypepnl = new MetroFramework.Controls.MetroPanel();
+            this.usertypelbl = new Bunifu.UI.WinForms.BunifuLabel();
             this.usericonpnl = new MetroFramework.Controls.MetroPanel();
             this.usernamepnl = new MetroFramework.Controls.MetroPanel();
+            this.usernamelbl = new Bunifu.UI.WinForms.BunifuLabel();
             this.metroPanel5.SuspendLayout();
-            this.metroPanel2.SuspendLayout();
+            this.metroPanel3.SuspendLayout();
             this.metroPanel1.SuspendLayout();
+            this.metroPanel2.SuspendLayout();
+            this.metroPanel4.SuspendLayout();
             this.leftpnl.SuspendLayout();
             this.userdetailpnl.SuspendLayout();
+            this.usertypepnl.SuspendLayout();
             this.usericonpnl.SuspendLayout();
+            this.usernamepnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroPanel5
             // 
             this.metroPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.metroPanel5.Controls.Add(this.metroPanel2);
-            this.metroPanel5.Controls.Add(this.metroPanel1);
-            this.metroPanel5.Controls.Add(this.leftpnl);
+            this.metroPanel5.Controls.Add(this.metroPanel3);
             this.metroPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroPanel5.HorizontalScrollbarBarColor = true;
             this.metroPanel5.HorizontalScrollbarHighlightOnWheel = false;
@@ -79,117 +85,151 @@
             this.metroPanel5.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel5.VerticalScrollbarSize = 10;
             // 
+            // metroPanel3
+            // 
+            this.metroPanel3.Controls.Add(this.metroPanel1);
+            this.metroPanel3.Controls.Add(this.leftpnl);
+            this.metroPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroPanel3.HorizontalScrollbarBarColor = true;
+            this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel3.HorizontalScrollbarSize = 10;
+            this.metroPanel3.Location = new System.Drawing.Point(0, 0);
+            this.metroPanel3.Name = "metroPanel3";
+            this.metroPanel3.Size = new System.Drawing.Size(1384, 961);
+            this.metroPanel3.TabIndex = 150;
+            this.metroPanel3.UseCustomBackColor = true;
+            this.metroPanel3.UseCustomForeColor = true;
+            this.metroPanel3.VerticalScrollbarBarColor = true;
+            this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel3.VerticalScrollbarSize = 10;
+            // 
+            // metroPanel1
+            // 
+            this.metroPanel1.Controls.Add(this.metroPanel2);
+            this.metroPanel1.Controls.Add(this.metroPanel4);
+            this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(350, 0);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(1034, 961);
+            this.metroPanel1.TabIndex = 153;
+            this.metroPanel1.UseCustomBackColor = true;
+            this.metroPanel1.UseCustomForeColor = true;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
             // metroPanel2
             // 
-            this.metroPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroPanel2.Controls.Add(this.userdb);
+            this.metroPanel2.Controls.Add(this.accountbtn);
             this.metroPanel2.Controls.Add(this.manual);
             this.metroPanel2.Controls.Add(this.help);
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(482, 344);
+            this.metroPanel2.Location = new System.Drawing.Point(0, 193);
             this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(790, 483);
-            this.metroPanel2.TabIndex = 149;
+            this.metroPanel2.Size = new System.Drawing.Size(1034, 768);
+            this.metroPanel2.TabIndex = 153;
             this.metroPanel2.UseCustomBackColor = true;
             this.metroPanel2.UseCustomForeColor = true;
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
             // 
-            // userdb
+            // accountbtn
             // 
-            this.userdb.AllowAnimations = true;
-            this.userdb.AllowMouseEffects = true;
-            this.userdb.AllowToggling = false;
-            this.userdb.AnimationSpeed = 200;
-            this.userdb.AutoGenerateColors = false;
-            this.userdb.AutoRoundBorders = false;
-            this.userdb.AutoSizeLeftIcon = true;
-            this.userdb.AutoSizeRightIcon = true;
-            this.userdb.BackColor = System.Drawing.Color.Transparent;
-            this.userdb.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.userdb.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userdb.BackgroundImage")));
-            this.userdb.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.userdb.ButtonText = "Account";
-            this.userdb.ButtonTextMarginLeft = 0;
-            this.userdb.ColorContrastOnClick = 45;
-            this.userdb.ColorContrastOnHover = 45;
-            this.userdb.Cursor = System.Windows.Forms.Cursors.Default;
+            this.accountbtn.AllowAnimations = true;
+            this.accountbtn.AllowMouseEffects = true;
+            this.accountbtn.AllowToggling = false;
+            this.accountbtn.AnimationSpeed = 200;
+            this.accountbtn.AutoGenerateColors = false;
+            this.accountbtn.AutoRoundBorders = false;
+            this.accountbtn.AutoSizeLeftIcon = true;
+            this.accountbtn.AutoSizeRightIcon = true;
+            this.accountbtn.BackColor = System.Drawing.Color.Transparent;
+            this.accountbtn.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.accountbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("accountbtn.BackgroundImage")));
+            this.accountbtn.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.accountbtn.ButtonText = "Account";
+            this.accountbtn.ButtonTextMarginLeft = 0;
+            this.accountbtn.ColorContrastOnClick = 45;
+            this.accountbtn.ColorContrastOnHover = 45;
+            this.accountbtn.Cursor = System.Windows.Forms.Cursors.Default;
             borderEdges1.BottomLeft = true;
             borderEdges1.BottomRight = true;
             borderEdges1.TopLeft = true;
             borderEdges1.TopRight = true;
-            this.userdb.CustomizableEdges = borderEdges1;
-            this.userdb.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.userdb.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.userdb.DisabledFillColor = System.Drawing.Color.Empty;
-            this.userdb.DisabledForecolor = System.Drawing.Color.Empty;
-            this.userdb.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.userdb.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userdb.ForeColor = System.Drawing.Color.Black;
-            this.userdb.IconLeft = null;
-            this.userdb.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.userdb.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.userdb.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.userdb.IconMarginLeft = 11;
-            this.userdb.IconPadding = 10;
-            this.userdb.IconRight = null;
-            this.userdb.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.userdb.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.userdb.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.userdb.IconSize = 25;
-            this.userdb.IdleBorderColor = System.Drawing.Color.Empty;
-            this.userdb.IdleBorderRadius = 0;
-            this.userdb.IdleBorderThickness = 0;
-            this.userdb.IdleFillColor = System.Drawing.Color.Empty;
-            this.userdb.IdleIconLeftImage = null;
-            this.userdb.IdleIconRightImage = null;
-            this.userdb.IndicateFocus = false;
-            this.userdb.Location = new System.Drawing.Point(314, 302);
-            this.userdb.Name = "userdb";
-            this.userdb.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.userdb.OnDisabledState.BorderRadius = 1;
-            this.userdb.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.userdb.OnDisabledState.BorderThickness = 1;
-            this.userdb.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.userdb.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.userdb.OnDisabledState.IconLeftImage = null;
-            this.userdb.OnDisabledState.IconRightImage = null;
-            this.userdb.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.userdb.onHoverState.BorderRadius = 1;
-            this.userdb.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.userdb.onHoverState.BorderThickness = 1;
-            this.userdb.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.userdb.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.userdb.onHoverState.IconLeftImage = null;
-            this.userdb.onHoverState.IconRightImage = null;
-            this.userdb.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.userdb.OnIdleState.BorderRadius = 1;
-            this.userdb.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.userdb.OnIdleState.BorderThickness = 1;
-            this.userdb.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.userdb.OnIdleState.ForeColor = System.Drawing.Color.Black;
-            this.userdb.OnIdleState.IconLeftImage = null;
-            this.userdb.OnIdleState.IconRightImage = null;
-            this.userdb.OnPressedState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.userdb.OnPressedState.BorderRadius = 1;
-            this.userdb.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.userdb.OnPressedState.BorderThickness = 1;
-            this.userdb.OnPressedState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.userdb.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.userdb.OnPressedState.IconLeftImage = null;
-            this.userdb.OnPressedState.IconRightImage = null;
-            this.userdb.Size = new System.Drawing.Size(168, 74);
-            this.userdb.TabIndex = 147;
-            this.userdb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.userdb.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.userdb.TextMarginLeft = 0;
-            this.userdb.TextPadding = new System.Windows.Forms.Padding(0);
-            this.userdb.UseDefaultRadiusAndThickness = true;
+            this.accountbtn.CustomizableEdges = borderEdges1;
+            this.accountbtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.accountbtn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.accountbtn.DisabledFillColor = System.Drawing.Color.Empty;
+            this.accountbtn.DisabledForecolor = System.Drawing.Color.Empty;
+            this.accountbtn.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.accountbtn.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accountbtn.ForeColor = System.Drawing.Color.Black;
+            this.accountbtn.IconLeft = null;
+            this.accountbtn.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.accountbtn.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.accountbtn.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.accountbtn.IconMarginLeft = 11;
+            this.accountbtn.IconPadding = 10;
+            this.accountbtn.IconRight = null;
+            this.accountbtn.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.accountbtn.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.accountbtn.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.accountbtn.IconSize = 25;
+            this.accountbtn.IdleBorderColor = System.Drawing.Color.Empty;
+            this.accountbtn.IdleBorderRadius = 0;
+            this.accountbtn.IdleBorderThickness = 0;
+            this.accountbtn.IdleFillColor = System.Drawing.Color.Empty;
+            this.accountbtn.IdleIconLeftImage = null;
+            this.accountbtn.IdleIconRightImage = null;
+            this.accountbtn.IndicateFocus = false;
+            this.accountbtn.Location = new System.Drawing.Point(445, 419);
+            this.accountbtn.Name = "accountbtn";
+            this.accountbtn.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.accountbtn.OnDisabledState.BorderRadius = 1;
+            this.accountbtn.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.accountbtn.OnDisabledState.BorderThickness = 1;
+            this.accountbtn.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.accountbtn.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.accountbtn.OnDisabledState.IconLeftImage = null;
+            this.accountbtn.OnDisabledState.IconRightImage = null;
+            this.accountbtn.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.accountbtn.onHoverState.BorderRadius = 1;
+            this.accountbtn.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.accountbtn.onHoverState.BorderThickness = 1;
+            this.accountbtn.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.accountbtn.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.accountbtn.onHoverState.IconLeftImage = null;
+            this.accountbtn.onHoverState.IconRightImage = null;
+            this.accountbtn.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.accountbtn.OnIdleState.BorderRadius = 1;
+            this.accountbtn.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.accountbtn.OnIdleState.BorderThickness = 1;
+            this.accountbtn.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.accountbtn.OnIdleState.ForeColor = System.Drawing.Color.Black;
+            this.accountbtn.OnIdleState.IconLeftImage = null;
+            this.accountbtn.OnIdleState.IconRightImage = null;
+            this.accountbtn.OnPressedState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.accountbtn.OnPressedState.BorderRadius = 1;
+            this.accountbtn.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.accountbtn.OnPressedState.BorderThickness = 1;
+            this.accountbtn.OnPressedState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.accountbtn.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.accountbtn.OnPressedState.IconLeftImage = null;
+            this.accountbtn.OnPressedState.IconRightImage = null;
+            this.accountbtn.Size = new System.Drawing.Size(168, 74);
+            this.accountbtn.TabIndex = 147;
+            this.accountbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.accountbtn.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.accountbtn.TextMarginLeft = 0;
+            this.accountbtn.TextPadding = new System.Windows.Forms.Padding(0);
+            this.accountbtn.UseDefaultRadiusAndThickness = true;
+            this.accountbtn.Click += new System.EventHandler(this.accountbtn_Click);
             // 
             // manual
             // 
@@ -240,7 +280,7 @@
             this.manual.IdleIconLeftImage = null;
             this.manual.IdleIconRightImage = null;
             this.manual.IndicateFocus = false;
-            this.manual.Location = new System.Drawing.Point(553, 104);
+            this.manual.Location = new System.Drawing.Point(684, 221);
             this.manual.Name = "manual";
             this.manual.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.manual.OnDisabledState.BorderRadius = 1;
@@ -332,7 +372,7 @@
             this.help.IdleIconLeftImage = null;
             this.help.IdleIconRightImage = null;
             this.help.IndicateFocus = false;
-            this.help.Location = new System.Drawing.Point(79, 104);
+            this.help.Location = new System.Drawing.Point(210, 221);
             this.help.Name = "help";
             this.help.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.help.OnDisabledState.BorderRadius = 1;
@@ -375,22 +415,21 @@
             this.help.UseDefaultRadiusAndThickness = true;
             this.help.Click += new System.EventHandler(this.help_Click);
             // 
-            // metroPanel1
+            // metroPanel4
             // 
-            this.metroPanel1.Controls.Add(this.headerlabel1);
-            this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(350, 0);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(1034, 193);
-            this.metroPanel1.TabIndex = 37;
-            this.metroPanel1.UseCustomBackColor = true;
-            this.metroPanel1.UseCustomForeColor = true;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
+            this.metroPanel4.Controls.Add(this.headerlabel1);
+            this.metroPanel4.HorizontalScrollbarBarColor = true;
+            this.metroPanel4.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel4.HorizontalScrollbarSize = 10;
+            this.metroPanel4.Location = new System.Drawing.Point(0, 0);
+            this.metroPanel4.Name = "metroPanel4";
+            this.metroPanel4.Size = new System.Drawing.Size(1034, 193);
+            this.metroPanel4.TabIndex = 152;
+            this.metroPanel4.UseCustomBackColor = true;
+            this.metroPanel4.UseCustomForeColor = true;
+            this.metroPanel4.VerticalScrollbarBarColor = true;
+            this.metroPanel4.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel4.VerticalScrollbarSize = 10;
             // 
             // headerlabel1
             // 
@@ -398,7 +437,7 @@
             this.headerlabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.headerlabel1.Font = new System.Drawing.Font("Comic Sans MS", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.headerlabel1.ForeColor = System.Drawing.Color.SeaShell;
-            this.headerlabel1.Location = new System.Drawing.Point(205, 86);
+            this.headerlabel1.Location = new System.Drawing.Point(201, 88);
             this.headerlabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.headerlabel1.Name = "headerlabel1";
             this.headerlabel1.Size = new System.Drawing.Size(162, 50);
@@ -423,7 +462,7 @@
             this.leftpnl.Location = new System.Drawing.Point(0, 0);
             this.leftpnl.Name = "leftpnl";
             this.leftpnl.Size = new System.Drawing.Size(350, 961);
-            this.leftpnl.TabIndex = 2;
+            this.leftpnl.TabIndex = 152;
             this.leftpnl.UseCustomBackColor = true;
             this.leftpnl.UseCustomForeColor = true;
             this.leftpnl.VerticalScrollbarBarColor = true;
@@ -564,7 +603,7 @@
             this.homebtn.Text = "Home";
             this.homebtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.homebtn.UseVisualStyleBackColor = false;
-            this.homebtn.Click += new System.EventHandler(this.homebtn_Click);
+            this.homebtn.Click += new System.EventHandler(this.homebtn_Click_1);
             this.homebtn.Leave += new System.EventHandler(this.homebtn_Leave);
             // 
             // userdetailpnl
@@ -589,6 +628,7 @@
             // usertypepnl
             // 
             this.usertypepnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.usertypepnl.Controls.Add(this.usertypelbl);
             this.usertypepnl.Dock = System.Windows.Forms.DockStyle.Top;
             this.usertypepnl.HorizontalScrollbarBarColor = true;
             this.usertypepnl.HorizontalScrollbarHighlightOnWheel = false;
@@ -602,6 +642,25 @@
             this.usertypepnl.VerticalScrollbarBarColor = true;
             this.usertypepnl.VerticalScrollbarHighlightOnWheel = false;
             this.usertypepnl.VerticalScrollbarSize = 10;
+            // 
+            // usertypelbl
+            // 
+            this.usertypelbl.AllowParentOverrides = false;
+            this.usertypelbl.AutoEllipsis = false;
+            this.usertypelbl.AutoSize = false;
+            this.usertypelbl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.usertypelbl.CursorType = null;
+            this.usertypelbl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.usertypelbl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usertypelbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(249)))));
+            this.usertypelbl.Location = new System.Drawing.Point(0, 0);
+            this.usertypelbl.Name = "usertypelbl";
+            this.usertypelbl.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.usertypelbl.Size = new System.Drawing.Size(350, 52);
+            this.usertypelbl.TabIndex = 142;
+            this.usertypelbl.Text = "Type";
+            this.usertypelbl.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.usertypelbl.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // usericonpnl
             // 
@@ -626,6 +685,7 @@
             // usernamepnl
             // 
             this.usernamepnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.usernamepnl.Controls.Add(this.usernamelbl);
             this.usernamepnl.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.usernamepnl.HorizontalScrollbarBarColor = true;
             this.usernamepnl.HorizontalScrollbarHighlightOnWheel = false;
@@ -640,21 +700,46 @@
             this.usernamepnl.VerticalScrollbarHighlightOnWheel = false;
             this.usernamepnl.VerticalScrollbarSize = 10;
             // 
+            // usernamelbl
+            // 
+            this.usernamelbl.AllowParentOverrides = false;
+            this.usernamelbl.AutoEllipsis = false;
+            this.usernamelbl.AutoSize = false;
+            this.usernamelbl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.usernamelbl.CursorType = null;
+            this.usernamelbl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.usernamelbl.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernamelbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(249)))));
+            this.usernamelbl.Location = new System.Drawing.Point(0, 0);
+            this.usernamelbl.Name = "usernamelbl";
+            this.usernamelbl.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.usernamelbl.Size = new System.Drawing.Size(350, 47);
+            this.usernamelbl.TabIndex = 141;
+            this.usernamelbl.Text = "Username";
+            this.usernamelbl.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.usernamelbl.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1384, 961);
             this.Controls.Add(this.metroPanel5);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Settings";
+            this.Text = "ART DataStore";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.metroPanel5.ResumeLayout(false);
-            this.metroPanel2.ResumeLayout(false);
+            this.metroPanel3.ResumeLayout(false);
             this.metroPanel1.ResumeLayout(false);
-            this.metroPanel1.PerformLayout();
+            this.metroPanel2.ResumeLayout(false);
+            this.metroPanel4.ResumeLayout(false);
+            this.metroPanel4.PerformLayout();
             this.leftpnl.ResumeLayout(false);
             this.userdetailpnl.ResumeLayout(false);
+            this.usertypepnl.ResumeLayout(false);
             this.usericonpnl.ResumeLayout(false);
+            this.usernamepnl.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -662,6 +747,14 @@
         #endregion
 
         private MetroFramework.Controls.MetroPanel metroPanel5;
+        private MetroFramework.Controls.MetroPanel metroPanel3;
+        private MetroFramework.Controls.MetroPanel metroPanel1;
+        private MetroFramework.Controls.MetroPanel metroPanel2;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton accountbtn;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton manual;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton help;
+        private MetroFramework.Controls.MetroPanel metroPanel4;
+        private System.Windows.Forms.Label headerlabel1;
         private MetroFramework.Controls.MetroPanel leftpnl;
         private System.Windows.Forms.Panel pnlNav;
         private System.Windows.Forms.Button logoutbtn;
@@ -672,13 +765,9 @@
         private System.Windows.Forms.Button homebtn;
         private MetroFramework.Controls.MetroPanel userdetailpnl;
         private MetroFramework.Controls.MetroPanel usertypepnl;
+        private Bunifu.UI.WinForms.BunifuLabel usertypelbl;
         private MetroFramework.Controls.MetroPanel usericonpnl;
         private MetroFramework.Controls.MetroPanel usernamepnl;
-        private MetroFramework.Controls.MetroPanel metroPanel1;
-        private System.Windows.Forms.Label headerlabel1;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton manual;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton userdb;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton help;
-        private MetroFramework.Controls.MetroPanel metroPanel2;
+        private Bunifu.UI.WinForms.BunifuLabel usernamelbl;
     }
 }

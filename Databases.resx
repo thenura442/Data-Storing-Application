@@ -194,6 +194,9 @@
         k43nkzB39yb7QTqYZ/8zhPwLc0UNDpTEvyEAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="usertypelbl.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 16px;font-family: 'Segoe UI'; font-size: 11.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 129, 249); text-align: center; }</value>
+  </data>
   <data name="usericonpnl.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAYAAAA+s9J6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -300,6 +303,9 @@
         v1XaG1Mr2d2lu8SVe4+Ik2ixAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD1oUWL/wfEpC9tPtsK
         bQAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="usernamelbl.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 10px;font-family: 'Segoe UI'; font-size: 14.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 129, 249); text-align: center; }</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

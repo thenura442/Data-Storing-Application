@@ -12,14 +12,8 @@ namespace Data_Storing_App
 {
     public partial class Databases : Form
     {
+
         string currentuser, currentusertype;
-
-        Forms fm = new Forms();
-        Home hm = new Home();
-        Reminders rms = new Reminders();
-        Login lg = new Login();
-        Settings sts = new Settings();
-
         public Databases()
         {
             InitializeComponent();
@@ -30,9 +24,11 @@ namespace Data_Storing_App
             pnlNav.Left = databasebtn.Left;
             databasebtn.BackColor = Color.FromArgb(46, 51, 93);
 
+            currentuser = staticmethods.getuser();
+            currentusertype = staticmethods.gettype();
 
-            currentuser = Login.user;
-            currentusertype = Login.type;
+            usernamelbl.Text = currentuser;
+            usertypelbl.Text = currentusertype;
 
             check();
         }
@@ -44,7 +40,7 @@ namespace Data_Storing_App
             pnlNav.Left = homebtn.Left;
             homebtn.BackColor = Color.FromArgb(46, 51, 93);
 
-            hm.Show();
+            staticmethods.homeshow();
             this.Hide();
         }
 
@@ -55,8 +51,8 @@ namespace Data_Storing_App
             pnlNav.Left = formsbtn.Left;
             formsbtn.BackColor = Color.FromArgb(46, 51, 93);
 
+            staticmethods.formsshow();
             this.Hide();
-            fm.Show();
         }
 
         private void databasebtn_Click(object sender, EventArgs e)
@@ -74,8 +70,8 @@ namespace Data_Storing_App
             pnlNav.Left = reminderbtn.Left;
             reminderbtn.BackColor = Color.FromArgb(46, 51, 93);
 
+            staticmethods.remindershow();
             this.Hide();
-            rms.Show();
         }
 
         private void logoutbtn_Click(object sender, EventArgs e)
@@ -85,8 +81,8 @@ namespace Data_Storing_App
             pnlNav.Left = logoutbtn.Left;
             logoutbtn.BackColor = Color.FromArgb(46, 51, 93);
 
+            staticmethods.logoutshow();
             this.Hide();
-            lg.Show();
         }
 
         private void settingsbtn_Click(object sender, EventArgs e)
@@ -96,8 +92,8 @@ namespace Data_Storing_App
             pnlNav.Left = settingsbtn.Left;
             settingsbtn.BackColor = Color.FromArgb(46, 51, 93);
 
+            staticmethods.settingsshow();
             this.Hide();
-            sts.Show();
         }
 
         private void homebtn_Leave(object sender, EventArgs e)
@@ -130,43 +126,35 @@ namespace Data_Storing_App
             settingsbtn.BackColor = Color.FromArgb(24, 30, 54);
         }
 
+
+        // databases opening
         private void resourcesdb_Click(object sender, EventArgs e)
         {
-            Resources_Database rd = new Resources_Database();
-
-            rd.Show();
+            staticmethods.resourcedb();
             this.Hide();
         }
 
         private void salarydb_Click(object sender, EventArgs e)
         {
-            Salary_Database rd = new Salary_Database();
-
-            rd.Show();
+            staticmethods.salarydb();
             this.Hide();
         }
 
         private void userdb_Click(object sender, EventArgs e)
         {
-            User_Database rd = new User_Database();
-
-            rd.Show();
+            staticmethods.userdb();
             this.Hide();
         }
 
         private void vehicledb_Click(object sender, EventArgs e)
         {
-            Vehicle_Database rd = new Vehicle_Database();
-
-            rd.Show();
+            staticmethods.vehicledb();
             this.Hide();
         }
 
         private void employeedb_Click(object sender, EventArgs e)
         {
-            Employee_Database rd = new Employee_Database();
-
-            rd.Show();
+            staticmethods.empdb();
             this.Hide();
         }
 
